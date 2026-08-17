@@ -2,13 +2,35 @@
 
 ## 專案目標
 
-用 `channel-t-content.md` 的內容，做一個**單頁可滾動的靜態網站**，作為 Ryan 的面試作品集，之後部署到 GitHub Pages。這是獨立專案，跟 Ryan 正在開發的主要作品集網站（Next.js \+ GSAP）**完全分開**，不要共用 repo，也不需要框架、不需要建置流程（build step）——純 HTML/CSS/少量 JS 即可，愈簡單愈好，方便快速部署跟後續維護。
+用 `channel-t-content.md` 的內容，做一個面試作品集網站，之後部署到 GitHub Pages。\*\*未來會加入第二個案例研究（mimicasa），架構要能支援多案例，不要把所有內容塞進單一頁面。\*\*這是獨立專案，跟 Ryan 正在開發的主要作品集網站（Next.js \+ GSAP）**完全分開**，不要共用 repo，也不需要框架、不需要建置流程（build step）——純 HTML/CSS/少量 JS 即可，愈簡單愈好，方便快速部署跟後續維護。
+
+## 網站架構（多案例研究）
+
+/index.html              → 登陸頁：簡短自我介紹 \+ 案例研究入口卡片（目前只有 Channel-T，之後加 mimicasa）
+
+/channel-t/index.html    → Channel-T 完整案例研究（12 段內容，見下方）
+
+/mimicasa/index.html     → 之後補上，先不用建立，但架構要預留
+
+/assets/                 → 共用圖片資料夾，子資料夾依案例分（assets/channel-t/、assets/mimicasa/）
+
+/style.css               → 共用樣式表（stone/sand 設計系統），登陸頁與各案例研究頁共用同一份
+
+**登陸頁（`/index.html`）內容**：
+
+- 簡短一段自我介紹（角色：UI/UX 設計 / 產品經理）  
+- 案例研究卡片列表，目前只有一張：Channel-T（B2B SaaS 智能行程分銷平台），點擊進入 `/channel-t/`  
+- 卡片可以用 Key Outcomes 裡的一兩句話當摘要，不用整個 S2 都搬過來  
+- 極簡、不用花俏動效，這是入口頁，重點是讓人快速選擇要看哪個案例
+
+**Channel-T 案例研究頁（`/channel-t/index.html`）**：完整 12 段內容，用 `channel-t-content.md` 填入，結構同下方規格。
 
 ## 技術規格
 
 - 純靜態 HTML \+ CSS（+ 少量 vanilla JS 處理 nav 顯隱／平滑滾動即可，不用任何框架）  
 - 不需要 Node、不需要套件管理、不需要建置指令——檔案寫好就能直接部署到 GitHub Pages  
-- 中文語系：`<html lang="zh-Hant">`，中文字體使用系統字體 fallback（`"Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif`），英文/數字用 Inter 或系統無襯線字體
+- 中文語系：`<html lang="zh-Hant">`，中文字體使用系統字體 fallback（`"Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif`），英文/數字用 Inter 或系統無襯線字體  
+- CSS 抽成獨立的 `style.css`，讓登陸頁跟未來的 mimicasa 頁面都能直接引用，不用每個案例研究頁各自重複寫一份樣式
 
 ## 視覺系統（深色版，套用即可，不用重新設計）
 
@@ -72,7 +94,7 @@ Ryan 會陸續補圖進來，網站要先把圖片容器規劃好：
 - `img` 統一設定 `max-width: 100%; height: auto;` 響應式縮放  
 - 加上 `loading="lazy"` 延遲載入  
 - 每張圖預留有意義的 `alt` 文字（描述圖片內容，供 SEO 與無障礙使用）  
-- 目前先用檔名佔位（例如 `assets/s7-01-ia-structure.png`），實際圖檔由 Ryan 之後補進 `assets/` 資料夾  
+- 目前先用檔名佔位（例如 `assets/channel-t/s7-01-ia-structure.png`），實際圖檔由 Ryan 之後補進 `assets/channel-t/` 資料夾  
 - 建議在 S6-03、S7-01、S7-03、S8-01/02/03 這幾個段落預留圖片位置（這些段落最適合搭配示意圖或線稿），其餘段落純文字即可，不用每段都塞圖
 
 ## RWD 斷點
@@ -89,9 +111,10 @@ Mobile 版：所有多欄 grid（例如 S3 的 metadata、S8 的雙圖並排）�
 
 ## 部署
 
-- 建立新的 GitHub repo（獨立於主要 portfolio repo）  
-- 用 GitHub Pages 部署（repo 設定裡開啟 Pages，指向 main branch 的 root 或 `/docs` 資料夾皆可，用最簡單的方式）  
-- 檔案結構越簡單越好：`index.html`、`style.css`（或內嵌在 index.html 也可以）、`assets/` 資料夾放圖片
+- 建立新的 GitHub repo（獨立於主要 portfolio repo）— 已建立：`portfolio-presentation`  
+- 用 GitHub Pages 部署（repo 設定裡開啟 Pages，指向 main branch 的 root）  
+- 部署後網址結構：`https://帳號.github.io/portfolio-presentation/`（登陸頁）、`https://帳號.github.io/portfolio-presentation/channel-t/`（Channel-T 案例研究）  
+- 檔案結構越簡單越好，依上方「網站架構」規劃即可
 
 ## 內容來源
 
