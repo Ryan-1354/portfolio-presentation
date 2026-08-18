@@ -584,8 +584,8 @@
           </ul>
           <p>命名則採用一致的階層式結構，例如：<code>prd/sys/size/spacing/inset/md</code>。透過一致的命名方式，讓設計規則更容易被搜尋、理解與維護。當產品需要調整尺寸、間距等規則時，也能從 Token 層級集中管理，而不需要逐一修改頁面與元件。</p>
           <figure>
-            <img src="../assets/channel-t/s9-02-design-token.svg" alt="Design Token 兩層架構：Reference Token 定義原始數值，System Token 對應產品語意與情境，並採用階層式命名" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="figure__placeholder" style="display:none;">Design Token — assets/channel-t/s9-02-design-token.svg</div>
+            <img src="../assets/channel-t/s9-02-design-token.png" alt="Design Token 兩層架構：Reference Token 定義原始數值，System Token 對應產品語意與情境，並採用階層式命名" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="figure__placeholder" style="display:none;">Design Token — assets/channel-t/s9-02-design-token.png</div>
             <figcaption>Design Token：Reference Token 與 System Token 兩層架構。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
           </figure>
         </div>
@@ -600,8 +600,8 @@
             <p>我在設計 Component Library 時，也同步考量：元件是否能被前端重複使用、Variants 是否能對應實際開發需求、不同 State 是否能被明確定義、Icon 使用方式是否能維持一致，讓 Figma 中的 Component Library 與實際開發環境具有明確的對應關係。</p>
           </div>
           <figure>
-            <img src="../assets/channel-t/s9-03-component-library.svg" alt="Component Library 元件庫：Button、Input、Select、Dropdown、Date Picker、Chip、Modal、Toast、Table、Pagination、Breadcrumb 等元件的 Variants 與 States" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="figure__placeholder" style="display:none;">Component Library — assets/channel-t/s9-03-component-library.svg</div>
+            <img src="../assets/channel-t/s9-03-component-library.png" alt="Component Library 元件庫：Button、Input、Select、Dropdown、Date Picker、Chip、Modal、Toast、Table、Pagination、Breadcrumb 等元件的 Variants 與 States" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="figure__placeholder" style="display:none;">Component Library — assets/channel-t/s9-03-component-library.png</div>
             <figcaption>Component Library：核心 UI 元件的 Variants 與 States。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
           </figure>
         </div>
@@ -611,8 +611,8 @@
           <h3>Design Guideline</h3>
           <p>Component Library 解決「有哪些元件可以使用」，Design Guideline 則進一步定義「這些元件應該如何使用」。我整理產品中常見的設計規範，包括：Button 的 Inset 與尺寸規格、Spacing / Distance System、元子與分子等元件的組織方式、圖片尺寸與處理方式、不同裝置下 Toast 的位置與距離規範、常見元件的使用原則。例如同樣是 Toast，在不同裝置上需要考量畫面邊界、操作區域與內容高度，因此不只定義元件本身，也規範其與畫面邊界的距離。這一層的目的，是讓設計決策從「個別設計師的判斷」轉化成團隊可以共同遵循的規則。</p>
           <figure>
-            <img src="../assets/channel-t/s9-04-design-guideline.svg" alt="Design Guideline 設計規範：Button Inset 與尺寸、Spacing / Distance System、圖片處理與不同裝置下 Toast 的位置規範" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="figure__placeholder" style="display:none;">Design Guideline — assets/channel-t/s9-04-design-guideline.svg</div>
+            <img src="../assets/channel-t/s9-04-design-guideline.png" alt="Design Guideline 設計規範：Button Inset 與尺寸、Spacing / Distance System、圖片處理與不同裝置下 Toast 的位置規範" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="figure__placeholder" style="display:none;">Design Guideline — assets/channel-t/s9-04-design-guideline.png</div>
             <figcaption>Design Guideline：元件的使用規範與 Spacing / Distance System。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
           </figure>
         </div>
@@ -622,8 +622,8 @@
           <h3>Design Pattern</h3>
           <p>Component 解決的是「元件本身怎麼運作」，Design Pattern 則進一步處理特定產品情境下，元件應該如何組合與回饋。例如表單的必填欄位：當使用者沒有填寫必要資訊便直接送出時，不只是將 Input 標示為 Error，而是同時定義錯誤文字、文字層級、顏色、欄位狀態，以及使用者下一步應如何修正。因此，同一個 Input Component 在不同產品情境下，可以透過 Pattern 建立一致的使用方式，讓 Design System 不只是視覺元件集合，而開始涵蓋使用者操作與回饋邏輯。</p>
           <figure>
-            <img src="../assets/channel-t/s9-05-design-pattern.svg" alt="Design Pattern 設計模式：以表單必填欄位為例，定義 Error 狀態下的錯誤文字、文字層級、顏色、欄位狀態與修正引導" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="figure__placeholder" style="display:none;">Design Pattern — assets/channel-t/s9-05-design-pattern.svg</div>
+            <img src="../assets/channel-t/s9-05-design-pattern.png" alt="Design Pattern 設計模式：以表單必填欄位為例，定義 Error 狀態下的錯誤文字、文字層級、顏色、欄位狀態與修正引導" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="figure__placeholder" style="display:none;">Design Pattern — assets/channel-t/s9-05-design-pattern.png</div>
             <figcaption>Design Pattern：特定情境下元件的組合與回饋邏輯。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
           </figure>
         </div>
@@ -633,8 +633,8 @@
           <h3>UI States</h3>
           <p>最後，我將正常 User Flow 之外的特殊狀態獨立整理，避免每個頁面遇到特殊情況時重新定義視覺：Loading、Skeleton、Empty State、404、500、無資料、錯誤狀態。這些狀態平常不一定會出現在主要操作流程中，但卻直接影響產品在實際使用時的完整性。因此，我將這些狀態納入 Design System，讓產品即使進入異常、等待或無資料情境，也能維持一致的資訊呈現與使用者回饋。</p>
           <figure>
-            <img src="../assets/channel-t/s9-06-ui-states.svg" alt="UI States 特殊狀態：Loading、Skeleton、Empty State、404、500、無資料與錯誤狀態的一致視覺呈現" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="figure__placeholder" style="display:none;">UI States — assets/channel-t/s9-06-ui-states.svg</div>
+            <img src="../assets/channel-t/s9-06-ui-states.png" alt="UI States 特殊狀態：Loading、Skeleton、Empty State、404、500、無資料與錯誤狀態的一致視覺呈現" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="figure__placeholder" style="display:none;">UI States — assets/channel-t/s9-06-ui-states.png</div>
             <figcaption>UI States：Loading、Skeleton、Empty State、404／500 等特殊狀態。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
           </figure>
         </div>
