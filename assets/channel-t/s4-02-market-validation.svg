@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK TC">
+  <rect width="1000" height="520" fill="#141413"/>
+  <text x="24" y="28" font-size="11" fill="#8B877F">s4-02-market-validation</text>
+
+  <text x="60" y="66" font-size="15" fill="#C9B896" font-weight="600">市場規模（交通部觀光署公開資料，2024）</text>
+
+  <!-- 4 stat cards -->
+  <rect x="60" y="82" width="205" height="100" rx="4" fill="#1F1E1D" stroke="#3A3836"/>
+  <text x="162" y="122" font-size="30" fill="#F5F2EA" text-anchor="middle" font-weight="700">47,773</text>
+  <text x="162" y="150" font-size="13" fill="#8B877F" text-anchor="middle">領有導遊執照</text>
+
+  <rect x="277" y="82" width="205" height="100" rx="4" fill="#1F1E1D" stroke="#3A3836"/>
+  <text x="379" y="122" font-size="30" fill="#F5F2EA" text-anchor="middle" font-weight="700">71,493</text>
+  <text x="379" y="150" font-size="13" fill="#8B877F" text-anchor="middle">領有領隊執照</text>
+
+  <rect x="494" y="82" width="205" height="100" rx="4" fill="#1F1E1D" stroke="#3A3836"/>
+  <text x="596" y="122" font-size="30" fill="#F5F2EA" text-anchor="middle" font-weight="700">3,613</text>
+  <text x="596" y="150" font-size="13" fill="#8B877F" text-anchor="middle">甲、乙種旅行社</text>
+
+  <rect x="711" y="82" width="229" height="100" rx="4" fill="#1F1E1D" stroke="#C9B896" stroke-width="1.5"/>
+  <text x="825" y="122" font-size="30" fill="#F5F2EA" text-anchor="middle" font-weight="700">559</text>
+  <text x="825" y="150" font-size="13" fill="#8B877F" text-anchor="middle">綜合旅行社</text>
+
+  <!-- arrow down -->
+  <line x1="500" y1="200" x2="500" y2="234" stroke="#3A3836" stroke-width="1.5"/>
+  <polygon points="500,240 494,230 506,230" fill="#3A3836"/>
+
+  <!-- Revenue calc box -->
+  <rect x="60" y="254" width="880" height="150" rx="4" fill="#1F1E1D" stroke="#3A3836"/>
+  <text x="86" y="282" font-size="14" fill="#C9B896" font-weight="600">需求端單獨營收試算</text>
+
+  <text x="86" y="316" font-size="13" fill="#C7C2B8">假設條件：牛頭比例 10%、每旅行社 5 位業務、滲透率 10%、轉換率 8%、SaaS 基礎月費 $399</text>
+
+  <rect x="86" y="332" width="808" height="1" fill="#3A3836"/>
+
+  <text x="86" y="364" font-size="14" fill="#8B877F">第一年預期營收（需求端）</text>
+  <text x="860" y="368" font-size="26" fill="#F5F2EA" text-anchor="end" font-weight="700">約 NT$ 125.5 萬</text>
+  <text x="86" y="388" font-size="13" fill="#8B877F">對一間 7–12 人的小型公司而言，尚不足以支撐營運</text>
+
+  <!-- competitive analysis note -->
+  <text x="60" y="440" font-size="13" fill="#8B877F">競品分析：參考一間即將上市的綜合旅行社既有 B2B 平台，確認會員驗證（統編）、搜尋邏輯與資訊排序，</text>
+  <text x="60" y="460" font-size="13" fill="#8B877F">但因該平台為單一供應商自建，Channel-T 面向多供應商的上架設計並無直接可參考先例。</text>
+</svg>
