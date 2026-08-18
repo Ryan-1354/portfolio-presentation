@@ -1,0 +1,84 @@
+<svg viewBox="0 0 1200 640" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK TC">
+  <rect width="1200" height="640" fill="#141413"/>
+  <text x="24" y="28" font-size="11" fill="#8B877F">s7-03-wireframe-upload</text>
+
+  <!-- Left: Modal (upload step) -->
+  <g>
+    <text x="60" y="66" font-size="14" fill="#C9B896" font-weight="600">STEP 1 · 上傳原始檔案</text>
+
+    <rect x="60" y="86" width="420" height="300" rx="6" fill="#1F1E1D" stroke="#3A3836"/>
+    <!-- close icon -->
+    <circle cx="450" cy="116" r="10" fill="none" stroke="#8B877F"/>
+    <line x1="446" y1="112" x2="454" y2="120" stroke="#8B877F" stroke-width="1.2"/>
+    <line x1="454" y1="112" x2="446" y2="120" stroke="#8B877F" stroke-width="1.2"/>
+
+    <text x="270" y="130" font-size="17" fill="#F5F2EA" text-anchor="middle" font-weight="700">行程檔案上傳</text>
+
+    <rect x="90" y="160" width="360" height="1" fill="#3A3836"/>
+
+    <text x="90" y="190" font-size="12" fill="#8B877F">支援 PDF／圖片格式，單檔上限 20MB</text>
+
+    <text x="90" y="222" font-size="13" fill="#C7C2B8">檔案</text>
+    <rect x="90" y="232" width="360" height="46" rx="4" fill="#141413" stroke="#3A3836" stroke-dasharray="4 3"/>
+    <text x="270" y="260" font-size="13" fill="#8B877F" text-anchor="middle">拖曳或點擊上傳行程檔案</text>
+
+    <rect x="330" y="342" width="120" height="34" rx="4" fill="#C9B896"/>
+    <text x="390" y="364" font-size="13" fill="#141413" text-anchor="middle" font-weight="600">確認上傳</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="500" y1="240" x2="560" y2="240" stroke="#3A3836" stroke-width="1.5"/>
+  <polygon points="566,240 556,234 556,246" fill="#3A3836"/>
+  <text x="533" y="228" font-size="11" fill="#8B877F" text-anchor="middle">AI 解析</text>
+
+  <!-- Right: Review page -->
+  <g>
+    <text x="600" y="66" font-size="14" fill="#C9B896" font-weight="600">STEP 2 · 資訊核對與人工修正</text>
+
+    <rect x="600" y="86" width="540" height="420" rx="6" fill="#1F1E1D" stroke="#3A3836"/>
+
+    <!-- header bar -->
+    <rect x="600" y="86" width="540" height="46" rx="6" fill="#292722"/>
+    <circle cx="626" cy="109" r="8" fill="#3A3836"/>
+    <circle cx="1104" cy="109" r="9" fill="#3A3836"/>
+
+    <!-- image placeholder -->
+    <rect x="624" y="150" width="220" height="150" rx="4" fill="#141413" stroke="#3A3836"/>
+    <line x1="624" y1="150" x2="844" y2="300" stroke="#3A3836"/>
+    <line x1="844" y1="150" x2="624" y2="300" stroke="#3A3836"/>
+
+    <!-- field panel -->
+    <text x="864" y="168" font-size="12" fill="#8B877F">行程名稱</text>
+    <rect x="864" y="176" width="256" height="34" rx="4" fill="#141413" stroke="#3A3836"/>
+    <text x="876" y="198" font-size="12" fill="#F5F2EA">— 待填入 —</text>
+
+    <text x="864" y="228" font-size="12" fill="#8B877F">出發日期（可複選）</text>
+    <rect x="864" y="236" width="118" height="30" rx="14" fill="#292722" stroke="#3A3836"/>
+    <text x="923" y="255" font-size="11" fill="#F5F2EA" text-anchor="middle">2026-01-01</text>
+    <rect x="990" y="236" width="130" height="30" rx="14" fill="#292722" stroke="#3A3836"/>
+    <text x="1008" y="255" font-size="14" fill="#8B877F">＋</text>
+
+    <text x="864" y="288" font-size="12" fill="#8B877F">上架 ／ 下架日期</text>
+    <rect x="864" y="296" width="122" height="30" rx="4" fill="#141413" stroke="#3A3836"/>
+    <text x="925" y="315" font-size="11" fill="#F5F2EA" text-anchor="middle">2025-12-12</text>
+    <rect x="998" y="296" width="122" height="30" rx="4" fill="#141413" stroke="#3A3836"/>
+    <text x="1059" y="315" font-size="11" fill="#F5F2EA" text-anchor="middle">2026-06-06</text>
+
+    <text x="864" y="348" font-size="12" fill="#8B877F">同業售價</text>
+    <rect x="864" y="356" width="256" height="34" rx="4" fill="#141413" stroke="#3A3836"/>
+    <text x="876" y="378" font-size="12" fill="#F5F2EA">— 金額 —</text>
+    <text x="1104" y="378" font-size="12" fill="#8B877F">起</text>
+
+    <rect x="624" y="316" width="220" height="1" fill="#3A3836"/>
+    <text x="624" y="340" font-size="11" fill="#8B877F">主圖與行程摘要區塊</text>
+
+    <!-- bottom actions -->
+    <rect x="864" y="440" width="110" height="34" rx="4" fill="none" stroke="#3A3836"/>
+    <text x="919" y="462" font-size="12" fill="#C7C2B8" text-anchor="middle">返回上一頁</text>
+
+    <rect x="988" y="440" width="132" height="34" rx="4" fill="#C9B896"/>
+    <text x="1054" y="462" font-size="12" fill="#141413" text-anchor="middle" font-weight="600">確定上架</text>
+  </g>
+
+  <text x="60" y="540" font-size="11" fill="#8B877F">示意重製圖，非原始產品畫面</text>
+</svg>
