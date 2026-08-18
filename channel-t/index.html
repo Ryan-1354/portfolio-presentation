@@ -816,6 +816,17 @@
 
   <script>
     (function () {
+      // 依實際 header 高度設定 anchor 捲動偏移（比硬寫 CSS 值更精準）
+      var navEl = document.getElementById('nav');
+      function syncScrollPadding() {
+        if (navEl) {
+          document.documentElement.style.scrollPaddingTop = navEl.offsetHeight + 'px';
+        }
+      }
+      syncScrollPadding();
+      window.addEventListener('resize', syncScrollPadding);
+      window.addEventListener('load', syncScrollPadding);
+
       // 圖片 Lightbox：點擊任一張圖放大檢視
       var lb = document.getElementById('lightbox');
       var lbImg = document.getElementById('lightboxImg');
