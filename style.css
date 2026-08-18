@@ -457,6 +457,7 @@ figure {
 
 figure img {
   width: 100%;
+  cursor: zoom-in;
 }
 
 /* 圖片佔位（尚未補圖時的視覺提示） */
@@ -719,6 +720,77 @@ figcaption {
 }
 
 .case-card:hover .case-card__cta {
+  color: var(--sand);
+}
+
+/* --------------------------------------------------------------------------
+   圖片 Lightbox
+   -------------------------------------------------------------------------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 56px 40px 40px;
+  background-color: rgba(10, 10, 10, 0.94);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox__img {
+  max-width: min(1280px, 92vw);
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--stone-700);
+  background-color: var(--stone-900);
+  cursor: default;
+}
+
+.lightbox__caption {
+  color: var(--stone-500);
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 72ch;
+  border: none;
+  padding: 0;
+}
+
+.lightbox__caption .figure__note {
+  display: block;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--stone-700);
+  border-radius: var(--radius);
+  color: var(--stone-100);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.lightbox__close:hover {
+  border-color: var(--sand);
   color: var(--sand);
 }
 
