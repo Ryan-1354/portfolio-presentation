@@ -449,6 +449,8 @@ figure {
   border-radius: var(--radius);
   background-color: var(--stone-900);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .section--alt figure {
@@ -488,10 +490,11 @@ figure img {
 }
 
 figcaption {
+  order: -1; /* 圖說移到圖片上方 */
   padding: 14px 20px;
   font-size: 14px;
   color: var(--stone-500);
-  border-top: 1px solid var(--stone-700);
+  border-bottom: 1px solid var(--stone-700);
 }
 
 /* 圖說附註：示意重製圖提示，較淡呈現 */
@@ -757,6 +760,7 @@ figcaption {
 }
 
 .lightbox__caption {
+  order: 0; /* lightbox 內圖說維持在圖片下方 */
   color: var(--stone-500);
   font-size: 14px;
   line-height: 1.6;
