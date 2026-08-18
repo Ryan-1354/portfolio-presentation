@@ -784,7 +784,11 @@ figcaption {
   object-fit: contain;
   border: 1px solid var(--stone-700);
   background-color: var(--stone-900);
-  cursor: default;
+  cursor: zoom-in;
+  transform-origin: center center;
+  will-change: transform;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .lightbox__caption {

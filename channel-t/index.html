@@ -845,11 +845,32 @@
       var lbCap = document.getElementById('lightboxCaption');
       var lbClose = document.getElementById('lightboxClose');
 
+      // 縮放狀態
+      var ZOOM_STEPS = [1, 1.6, 2.4, 3.4]; // 每次點擊放大一級，超過最後一級回到原尺寸
+      var zoomIndex = 0;
+      var panX = 0, panY = 0;
+
+      function applyTransform() {
+        lbImg.style.transform =
+          'translate(' + panX + 'px,' + panY + 'px) scale(' + ZOOM_STEPS[zoomIndex] + ')';
+        var last = zoomIndex === ZOOM_STEPS.length - 1;
+        lbImg.style.cursor = zoomIndex === 0 ? 'zoom-in' : (last ? 'zoom-out' : 'zoom-in');
+      }
+
+      function resetZoom() {
+        zoomIndex = 0;
+        panX = 0;
+        panY = 0;
+        lbImg.style.transition = 'transform 0.25s ease';
+        applyTransform();
+      }
+
       function openLightbox(img) {
         lbImg.src = img.currentSrc || img.src;
         lbImg.alt = img.alt || '';
         var fc = img.closest('figure').querySelector('figcaption');
         lbCap.innerHTML = fc ? fc.innerHTML : '';
+        resetZoom();
         lb.classList.add('is-open');
         lb.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -860,6 +881,7 @@
         lb.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
         lbImg.removeAttribute('src');
+        resetZoom();
       }
 
       Array.prototype.forEach.call(document.querySelectorAll('figure img'), function (img) {
@@ -868,13 +890,54 @@
         });
       });
 
+      // 進 lightbox 後，點擊圖片繼續放大一級（循環回原尺寸）
+      var dragging = false, moved = false, startX = 0, startY = 0, startPanX = 0, startPanY = 0;
+
+      lbImg.addEventListener('click', function (e) {
+        e.stopPropagation(); // 避免觸發背景關閉
+        if (moved) { moved = false; return; } // 剛剛是拖曳，不觸發縮放
+        zoomIndex = (zoomIndex + 1) % ZOOM_STEPS.length;
+        if (zoomIndex === 0) { panX = 0; panY = 0; }
+        lbImg.style.transition = 'transform 0.25s ease';
+        applyTransform();
+      });
+
+      // 放大後可拖曳平移
+      lbImg.addEventListener('mousedown', function (e) {
+        if (zoomIndex === 0) return;
+        e.preventDefault();
+        dragging = true;
+        moved = false;
+        startX = e.clientX;
+        startY = e.clientY;
+        startPanX = panX;
+        startPanY = panY;
+        lbImg.style.transition = 'none';
+        lbImg.style.cursor = 'grabbing';
+      });
+      window.addEventListener('mousemove', function (e) {
+        if (!dragging) return;
+        var dx = e.clientX - startX;
+        var dy = e.clientY - startY;
+        if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
+        panX = startPanX + dx;
+        panY = startPanY + dy;
+        applyTransform();
+      });
+      window.addEventListener('mouseup', function () {
+        if (!dragging) return;
+        dragging = false;
+        applyTransform(); // 還原游標
+      });
+
       lbClose.addEventListener('click', closeLightbox);
       // 點擊背景（非圖片本身）關閉
       lb.addEventListener('click', function (e) {
         if (e.target !== lbImg) closeLightbox();
       });
       document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && lb.classList.contains('is-open')) closeLightbox();
+        if (!lb.classList.contains('is-open')) return;
+        if (e.key === 'Escape') closeLightbox();
       });
     })();
   </script>
