@@ -9,6 +9,7 @@
   --stone-700: #3A3836; /* 邊框、分隔線 */
   --stone-500: #8B877F; /* 次要文字 */
   --stone-300: #C7C2B8; /* 主要內文文字 */
+  --stone-200: #E4E0D8; /* 提亮內文文字 */
   --stone-100: #F5F2EA; /* 標題、高對比文字 */
   --sand: #C9B896;      /* 強調色 */
   --sand-dark: #A8966E; /* 強調色 hover 態 */
@@ -724,6 +725,33 @@ figcaption {
 
 .case-card:hover .case-card__cta {
   color: var(--sand);
+}
+
+/* --------------------------------------------------------------------------
+   Case study：整體文字提亮（僅作用於案例研究頁）
+   -------------------------------------------------------------------------- */
+.case-study {
+  color: var(--stone-200);
+}
+
+.case-study .hero__vp,
+.case-study .card p,
+.case-study .meta-grid__item p {
+  color: var(--stone-200);
+}
+
+.case-study .section-intro,
+.case-study figcaption {
+  color: var(--stone-300);
+}
+
+.case-study .figure__note {
+  color: var(--stone-300);
+  opacity: 0.85;
+}
+
+.case-study .hero__meta dt {
+  color: var(--stone-300);
 }
 
 /* --------------------------------------------------------------------------
