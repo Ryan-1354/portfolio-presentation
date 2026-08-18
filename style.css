@@ -37,7 +37,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 120px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -198,15 +198,12 @@ blockquote p {
   transition: transform 0.3s ease;
 }
 
-.nav.nav--hidden {
-  transform: translateY(-100%);
-}
-
+/* 第一列：wordmark + 首頁（space-between） */
 .nav__inner {
   max-width: var(--maxw);
   margin-inline: auto;
   padding: 0 var(--pad-desktop);
-  height: 64px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -223,37 +220,65 @@ blockquote p {
   color: var(--sand);
 }
 
-.nav__links {
+/* 第二列：章節錨點，一列水平排列、固定於 wordmark 列下方 */
+.subnav {
+  border-top: 1px solid var(--stone-700);
+}
+
+.subnav__links {
   display: flex;
   align-items: center;
   gap: 26px;
+  list-style: none;
+  margin: 0 auto;
+  max-width: var(--maxw);
+  padding: 0 var(--pad-desktop);
+  height: 48px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.subnav__links::-webkit-scrollbar {
+  display: none;
+}
+
+.subnav__links li {
+  margin: 0;
+}
+
+.subnav__links a {
+  color: var(--stone-300);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.subnav__links a:hover {
+  color: var(--sand);
+}
+
+/* 登陸頁單一連結列 */
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .nav__links a {
-  color: var(--stone-500);
+  color: var(--stone-300);
   font-size: 14px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
   transition: color 0.2s ease;
 }
 
 .nav__links a:hover {
   color: var(--stone-100);
-}
-
-.nav__toggle {
-  display: none;
-  background: none;
-  border: 1px solid var(--stone-700);
-  border-radius: var(--radius);
-  color: var(--stone-100);
-  width: 40px;
-  height: 36px;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 1;
 }
 
 /* --------------------------------------------------------------------------
@@ -584,10 +609,6 @@ figcaption {
 /* --------------------------------------------------------------------------
    登陸頁（landing）
    -------------------------------------------------------------------------- */
-.nav__home {
-  color: var(--stone-100) !important;
-}
-
 .landing-hero {
   min-height: 88vh;
   display: flex;
@@ -852,7 +873,8 @@ figcaption {
    -------------------------------------------------------------------------- */
 @media (max-width: 900px) {
   .container,
-  .nav__inner {
+  .nav__inner,
+  .subnav__links {
     padding-inline: var(--pad-tablet);
   }
 
@@ -867,10 +889,6 @@ figcaption {
   .card:last-child {
     grid-column: auto;
   }
-
-  .nav__links {
-    gap: 18px;
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -882,7 +900,8 @@ figcaption {
   }
 
   .container,
-  .nav__inner {
+  .nav__inner,
+  .subnav__links {
     padding-inline: var(--pad-mobile);
   }
 
@@ -897,50 +916,6 @@ figcaption {
 
   .hero__meta {
     gap: 28px;
-  }
-
-  /* nav 文字連結收起，改用漢堡選單 */
-  .nav__toggle {
-    display: block;
-  }
-
-  .nav__links {
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    background-color: rgba(10, 10, 10, 0.96);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--stone-700);
-    padding: 8px var(--pad-mobile) 16px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  .nav__links.is-open {
-    max-height: 80vh;
-  }
-
-  .nav__links li {
-    width: 100%;
-    margin: 0;
-    border-top: 1px solid var(--stone-700);
-  }
-
-  .nav__links li:first-child {
-    border-top: none;
-  }
-
-  .nav__links a {
-    display: block;
-    padding: 14px 0;
-    font-size: 15px;
-    color: var(--stone-300);
   }
 
   .meta-grid,

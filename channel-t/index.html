@@ -16,11 +16,14 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="../" class="nav__brand" aria-label="回到作品集首頁">Ryan Wu <span>Portfolio</span></a>
-      <button class="nav__toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false">≡</button>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="../" class="nav__home">← 首頁</a></li>
+    </div>
+    <nav class="subnav" aria-label="章節導覽">
+      <ul class="subnav__links">
+        <li><a href="#s1">TOP</a></li>
         <li><a href="#s2">關鍵產出</a></li>
+        <li><a href="#s3">專案概覽</a></li>
         <li><a href="#s4">問題探索</a></li>
+        <li><a href="#s5">專案限制</a></li>
         <li><a href="#s6">產品決策</a></li>
         <li><a href="#s7">UX 流程</a></li>
         <li><a href="#s8">UI 設計</a></li>
@@ -29,7 +32,7 @@
         <li><a href="#s11">商業驗證</a></li>
         <li><a href="#s12">專案回顧</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
   <main id="top">
@@ -673,6 +676,11 @@
             <h4>一次完成上傳工作</h4>
             <p>更重要的改變，是使用者不需要等待前一個檔案解析完成，就可以繼續上傳下一份行程。即使 AI 本身的總解析時間沒有因此大幅縮短，使用者完成「上傳工作」所需要的等待與流程中斷大幅降低。這次設計真正解決的並不是 AI 的技術效能，而是<strong>將「AI 等待時間」與「使用者工作時間」解耦</strong>——系統背景處理 → 使用者持續工作 → 回頭確認結果。</p>
           </div>
+          <figure>
+            <img src="../assets/channel-t/s10-01-snackbar.png" alt="行程上架迭代示意圖：AI 解析由 Modal 改為右下角 Fixed Snackbar，背景處理並提供持續性進度回饋，使用者可離開頁面繼續工作" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="figure__placeholder" style="display:none;">Modal → Fixed Snackbar — assets/channel-t/s10-01-snackbar.png</div>
+            <figcaption>行程上架：AI 解析由 Modal 改為 Fixed Snackbar，背景處理不中斷工作。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
+          </figure>
         </div>
 
         <div class="block">
@@ -682,6 +690,11 @@
           <p>原先的設計，是將不同出發日期視為同一行程下的資訊，並將不同子團的資料內容整合至母團的共用欄位中——例如價格會從不同子團中抓取最低值，以「起」作為價格呈現，讓供給方與需求方透過站內聊天進一步確認細節。這樣的設計在初期可以簡化資訊呈現與資料結構，但也意味著不同子團原本各自具備的資訊被壓縮成母團層級的摘要資訊，使用者無法直接查看特定出發日期所對應的完整內容。</p>
           <p>因此，我與後端工程師重新定義母團與子團的資料關係：每一個子團依附於母團之下獨立存在，使用者可以直接依照不同出發日期查看對應的子團資訊。這使得需求方不需要再透過「最低價＋起」推測不同日期的實際內容，供需雙方在進一步聯繫時，也可以直接針對特定日期與特定行程進行溝通，降低資訊確認成本。</p>
           <p>這次資料欄位的重新檢視，也讓我們回頭比對不同資料來源所需要的資訊，重新整理共用的資料結構，使不同的行程上架方式都能建立在相同的產品資料模型上——AI 上架與系統介接只是資料進入平台的方式不同，但進入產品後應該使用一致的資料結構與使用體驗。這次迭代讓我重新認識到：UX 設計不只是處理畫面本身，當產品開始接觸真實資料後，資料結構本身也會直接影響使用者看到什麼、如何理解資訊，以及如何完成工作。</p>
+          <figure>
+            <img src="../assets/channel-t/s10-02-data-structure.png" alt="母團與子團資料結構迭代示意圖：從子團資訊壓縮為母團摘要（最低價＋起），改為每個子團依附母團獨立存在、可依出發日期查看完整內容" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="figure__placeholder" style="display:none;">母團／子團資料結構 — assets/channel-t/s10-02-data-structure.png</div>
+            <figcaption>資料結構：母團／子團從摘要整合改為子團獨立、可依出發日期查看。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
+          </figure>
         </div>
 
         <div class="block">
@@ -690,6 +703,11 @@
           <p>最初的設計中，行程完成解析後，需要由使用者手動設定行程標籤，這些標籤會作為後續搜尋與 AI 智能推薦的資料基礎，標籤的正確性直接影響使用者找到適合行程的效率。</p>
           <p>但實際使用後，我重新思考：如果 AI 已經能夠解析行程內容，是否還需要讓使用者花時間逐一判斷與設定標籤？因此，後續將標籤建立流程改為：AI 解析行程 → 根據既有標籤規則自動建立標籤 → 使用者確認與修改。AI 不再只是協助填入行程基本資料，也進一步參與行程分類，但我沒有完全取消人工控制，而是保留使用者修改標籤的介面。</p>
           <p>因此形成：<strong>AI 負責降低分類成本，使用者保留最終判斷權</strong>，也讓「資料建立」與「搜尋／推薦」之間形成更完整的產品閉環。</p>
+          <figure>
+            <img src="../assets/channel-t/s10-03-ai-tagging.png" alt="行程標籤迭代示意圖：從使用者手動設定標籤，改為 AI 解析行程後依既有規則自動建立標籤、再由使用者確認與修改" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="figure__placeholder" style="display:none;">AI 輔助分類 — assets/channel-t/s10-03-ai-tagging.png</div>
+            <figcaption>行程標籤：從人工分類改為 AI 自動建立、使用者確認修改。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
+          </figure>
         </div>
 
         <div class="block">
@@ -730,11 +748,6 @@
           <p class="block__id">S11-04</p>
           <h3>三次提案的演進</h3>
           <p>回頭看這三次提案，我認為它們其實反映了產品從概念走向市場的三個階段——從第一次的「這個產品有沒有價值？」，到第二次的「我們是否願意合作？」，再到第三次的「這個產品如何符合我們實際的商業情境？」，提案本身也隨著產品成熟度逐步從概念驗證走向商業驗證。而對我而言，這也完成了從研究使用者問題、定義產品策略、設計產品，到驗證產品價值的一個完整產品設計循環。</p>
-          <figure>
-            <img src="../assets/channel-t/s11-04-proposal-evolution.svg" alt="三次客戶提案的演進示意圖：從「產品有沒有價值」、「是否願意合作」到「如何符合實際商業情境」，對應概念驗證到商業驗證的三個階段" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="figure__placeholder" style="display:none;">三次提案演進 — assets/channel-t/s11-04-proposal-evolution.svg</div>
-            <figcaption>三次提案的演進：從概念驗證逐步走向商業驗證。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
-          </figure>
         </div>
       </div>
     </section>
@@ -803,42 +816,6 @@
 
   <script>
     (function () {
-      // 漢堡選單開合
-      var toggle = document.getElementById('navToggle');
-      var links = document.getElementById('navLinks');
-      if (toggle && links) {
-        toggle.addEventListener('click', function () {
-          var open = links.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-        // 點擊連結後收合選單
-        links.addEventListener('click', function (e) {
-          if (e.target.tagName === 'A') {
-            links.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
-          }
-        });
-      }
-
-      // 向下滾動隱藏 nav、向上滾動顯示
-      var nav = document.getElementById('nav');
-      var lastY = window.pageYOffset;
-      var ticking = false;
-      window.addEventListener('scroll', function () {
-        if (ticking) return;
-        ticking = true;
-        window.requestAnimationFrame(function () {
-          var y = window.pageYOffset;
-          if (y > lastY && y > 200 && !links.classList.contains('is-open')) {
-            nav.classList.add('nav--hidden');
-          } else {
-            nav.classList.remove('nav--hidden');
-          }
-          lastY = y;
-          ticking = false;
-        });
-      });
-
       // 圖片 Lightbox：點擊任一張圖放大檢視
       var lb = document.getElementById('lightbox');
       var lbImg = document.getElementById('lightboxImg');
