@@ -22,6 +22,9 @@
 
   --radius: 2px;
 
+  /* 固定 header 總高（wordmark 列 56 + 錨點列 48 + 上下框線 2） */
+  --header-h: 106px;
+
   --font-sans: "Inter", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
     system-ui, sans-serif;
 }
@@ -37,7 +40,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 112px;
+  scroll-padding-top: var(--header-h);
   -webkit-text-size-adjust: 100%;
 }
 
