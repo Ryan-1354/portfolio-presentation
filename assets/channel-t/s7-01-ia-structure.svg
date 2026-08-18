@@ -2,7 +2,6 @@
   <rect width="1000" height="720" fill="#141413"/>
 
   <!-- file label -->
-  <text x="24" y="28" font-size="11" fill="#8B877F">s7-01-ia-structure</text>
 
   <!-- ===== Layer 0: Global Header/Navigation ===== -->
   <text x="60" y="70" font-size="15" fill="#C9B896" font-weight="600">全域共用層｜Header / Navigation</text>

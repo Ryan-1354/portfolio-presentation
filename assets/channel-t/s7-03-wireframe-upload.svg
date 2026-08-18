@@ -1,6 +1,5 @@
 <svg viewBox="0 0 1200 640" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK TC">
   <rect width="1200" height="640" fill="#141413"/>
-  <text x="24" y="28" font-size="11" fill="#8B877F">s7-03-wireframe-upload</text>
 
   <!-- Left: Modal (upload step) -->
   <g>
@@ -80,5 +79,4 @@
     <text x="1054" y="462" font-size="12" fill="#141413" text-anchor="middle" font-weight="600">確定上架</text>
   </g>
 
-  <text x="60" y="540" font-size="11" fill="#8B877F">示意重製圖，非原始產品畫面</text>
 </svg>
