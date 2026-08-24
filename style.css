@@ -1,18 +1,18 @@
 /* ==========================================================================
-   Channel-T 面試作品集 — 視覺系統（深色版）
+   Channel-T 面試作品集 — 視覺系統（淺色版）
    ========================================================================== */
 
 :root {
-  --stone-950: #0A0A0A; /* 主背景 */
-  --stone-900: #141413; /* 次要區塊背景 */
-  --stone-800: #1F1E1D; /* 卡片背景 */
-  --stone-700: #3A3836; /* 邊框、分隔線 */
-  --stone-500: #8B877F; /* 次要文字 */
-  --stone-300: #C7C2B8; /* 主要內文文字 */
-  --stone-200: #E4E0D8; /* 提亮內文文字 */
-  --stone-100: #F5F2EA; /* 標題、高對比文字 */
-  --sand: #C9B896;      /* 強調色 */
-  --sand-dark: #A8966E; /* 強調色 hover 態 */
+  --stone-950: #F7F4EE; /* 主背景 */
+  --stone-900: #EFEBE1; /* 次要區塊背景 */
+  --stone-800: #E7E2D6; /* 卡片背景 */
+  --stone-700: #D6D0C3; /* 邊框、分隔線 */
+  --stone-500: #77726A; /* 次要文字 */
+  --stone-300: #4A4640; /* 主要內文文字 */
+  --stone-200: #35322C; /* 提亮內文文字 */
+  --stone-100: #211F1B; /* 標題、高對比文字 */
+  --sand: #9A7C42;      /* 強調色 */
+  --sand-dark: #7F6635; /* 強調色 hover 態 */
 
   /* 版面尺度 */
   --maxw: 1120px;
@@ -194,7 +194,7 @@ blockquote p {
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: rgba(10, 10, 10, 0.72);
+  background-color: rgba(247, 244, 238, 0.78);
   backdrop-filter: saturate(140%) blur(14px);
   -webkit-backdrop-filter: saturate(140%) blur(14px);
   border-bottom: 1px solid var(--stone-700);
@@ -647,7 +647,7 @@ figcaption {
 
 .btn:hover {
   background-color: var(--sand);
-  color: var(--stone-950);
+  color: #F7F4EE; /* sand 填底時用淺色文字維持對比 */
   border-color: var(--sand);
 }
 
@@ -791,7 +791,7 @@ figcaption {
   justify-content: center;
   gap: 18px;
   padding: 56px 40px 40px;
-  background-color: rgba(10, 10, 10, 0.94);
+  background-color: rgba(233, 228, 218, 0.94);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
