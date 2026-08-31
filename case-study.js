@@ -9,7 +9,52 @@
   var main = document.querySelector('main');
 
   /* 案例研究頁沒有固定頂部導覽，錨點捲動偏移改小即可 */
-  document.documentElement.style.scrollPaddingTop = '32px';
+  var SCROLL_OFFSET = 40;
+  document.documentElement.style.scrollPaddingTop = SCROLL_OFFSET + 'px';
+
+  /* ------------------------------------------------------------------
+     錨點捲動：讓跳轉後 section 的標題貼近視窗頂端。
+     section 上下有 112px 裝飾留白，若對齊 section 外框頂端，標題會
+     被推到畫面中段、看起來像停在一片空白裡；因此改對齊 section 內
+     第一個內容元素（eyebrow / 標題）。
+     另外頁面有大量 loading="lazy" 圖片，原生錨點會在圖片尚未載入時
+     就算好位置、之後 layout 撐開又跑掉，所以一律改由 JS 於點擊、
+     load、hashchange 後重新計算捲動位置。
+     ------------------------------------------------------------------ */
+  function scrollToId(id, behavior) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var container = el.querySelector('.container');
+    var anchorEl = (container && container.firstElementChild) || container || el;
+    var y = anchorEl.getBoundingClientRect().top + window.pageYOffset - SCROLL_OFFSET;
+    if (y < 0) y = 0;
+    window.scrollTo({ top: y, behavior: behavior || 'auto' });
+  }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    var a = t && t.closest ? t.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    if (!id || !document.getElementById(id)) return;
+    e.preventDefault();
+    scrollToId(id, 'smooth');
+    if (window.history && history.replaceState) {
+      history.replaceState(null, '', '#' + id);
+    } else {
+      location.hash = id;
+    }
+  });
+
+  /* 首次載入 / 重新整理時網址帶 hash：等圖片與字體載入完成後再定位，
+     避免落在 section 內部而非最上緣 */
+  window.addEventListener('load', function () {
+    if (location.hash.length > 1) {
+      requestAnimationFrame(function () {
+        scrollToId(location.hash.slice(1), 'auto');
+      });
+    }
+  });
 
   /* ------------------------------------------------------------------
      側邊錨點導覽
