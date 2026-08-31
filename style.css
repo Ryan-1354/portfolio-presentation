@@ -22,8 +22,9 @@
 
   --radius: 2px;
 
-  /* 固定 header 總高（wordmark 列 56 + 錨點列 48 + 上下框線 2） */
-  --header-h: 106px;
+  /* 登陸頁固定 nav 總高（單列 56 + 下框線 1），錨點捲動偏移用；
+     案例研究頁無頂部 nav，改由 case-study.js 設更小的偏移 */
+  --header-h: 57px;
 
   --font-sans: "Inter", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
     system-ui, sans-serif;
