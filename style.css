@@ -42,6 +42,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-h);
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip; /* 防止任何細微水平溢出造成整頁橫向捲動 */
 }
 
 body {
@@ -55,6 +56,7 @@ body {
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-wrap: break-word; /* 長英文／token 字串在窄螢幕可斷行 */
 }
 
 img {
@@ -367,7 +369,7 @@ blockquote p {
   border-color: var(--sand);
 }
 
-.card:last-child {
+.cards .card:last-child {
   grid-column: 1 / -1;
 }
 
@@ -488,6 +490,10 @@ figure {
 
 figure img {
   width: 100%;
+  height: auto;
+  max-height: 78vh; /* 高圖不超過視窗高度 */
+  object-fit: contain; /* 高度被 max-height 限制時維持原比例、不失真 */
+  margin-inline: auto;
   cursor: zoom-in;
 }
 
@@ -869,6 +875,171 @@ figcaption {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   側邊錨點導覽（案例研究頁，由 case-study.js 依章節標題動態產生）
+   -------------------------------------------------------------------------- */
+/* 固定於左上角、永遠可見的回首頁連結（取代原本頂部 nav 的返回入口） */
+.home-link {
+  position: fixed;
+  top: 22px;
+  left: 24px;
+  z-index: 95;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--stone-500);
+  transition: color 0.2s ease;
+}
+
+.home-link:hover {
+  color: var(--sand);
+}
+
+.sidenav {
+  position: fixed;
+  top: 50%;
+  left: max(20px, calc((100vw - var(--maxw)) / 2 - 148px));
+  transform: translateY(-50%);
+  z-index: 90;
+  display: none; /* 預設隱藏，僅在夠寬、留白足夠的視窗顯示 */
+  width: 124px;
+  max-height: 78vh;
+  overflow-y: auto;
+  padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+.sidenav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidenav__list li {
+  margin: 0;
+}
+
+.sidenav__link {
+  display: block;
+  font-size: 13px;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  color: var(--stone-500);
+  transition: color 0.2s ease;
+}
+
+.sidenav__link:hover {
+  color: var(--sand-dark);
+}
+
+.sidenav__link.is-active {
+  color: var(--sand);
+}
+
+/* 視窗夠寬時才顯示側邊導覽（含 390px mobile 在內的窄螢幕維持隱藏） */
+@media (min-width: 1320px) {
+  .sidenav {
+    display: block;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   案例研究頁共用元件：卡片網格 / 表格 / 提示卡 / Figma 連結
+   -------------------------------------------------------------------------- */
+/* 等分卡片網格（不像 .cards 會把最後一張撐滿整列） */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin: 28px 0;
+}
+
+/* 資料表格 */
+.table-wrap {
+  margin: 28px 0;
+  overflow-x: auto;
+  border: 1px solid var(--stone-700);
+  border-radius: var(--radius);
+}
+
+.table-wrap table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 560px;
+  font-size: 15px;
+}
+
+.table-wrap th,
+.table-wrap td {
+  text-align: left;
+  vertical-align: top;
+  padding: 14px 16px;
+  line-height: 1.7;
+  border-bottom: 1px solid var(--stone-700);
+  border-right: 1px solid var(--stone-700);
+}
+
+.table-wrap th {
+  color: var(--stone-100);
+  font-weight: 600;
+  background-color: var(--stone-900);
+}
+
+.section--alt .table-wrap th {
+  background-color: var(--stone-800);
+}
+
+.table-wrap tr:last-child td {
+  border-bottom: none;
+}
+
+.table-wrap th:last-child,
+.table-wrap td:last-child {
+  border-right: none;
+}
+
+/* 提示卡：素材／預覽說明 */
+.note-card {
+  margin: 28px 0;
+  padding: 16px 20px;
+  border: 1px solid var(--stone-700);
+  border-left: 2px solid var(--sand);
+  border-radius: var(--radius);
+  background-color: var(--stone-900);
+  color: var(--stone-500);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.section--alt .note-card {
+  background-color: var(--stone-800);
+}
+
+.note-card p {
+  margin: 0;
+}
+
+/* 圖說內的「查看 Figma」外連 */
+.figma-link {
+  color: var(--sand);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.figma-link:hover {
+  color: var(--sand-dark);
 }
 
 /* --------------------------------------------------------------------------

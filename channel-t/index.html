@@ -12,28 +12,8 @@
 </head>
 <body class="case-study">
 
-  <!-- ====================== NAV ====================== -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="../" class="nav__brand" aria-label="回到作品集首頁">Ryan Wu <span>Portfolio</span></a>
-    </div>
-    <nav class="subnav" aria-label="章節導覽">
-      <ul class="subnav__links">
-        <li><a href="#s1">TOP</a></li>
-        <li><a href="#s2">關鍵產出</a></li>
-        <li><a href="#s3">專案概覽</a></li>
-        <li><a href="#s4">問題探索</a></li>
-        <li><a href="#s5">專案限制</a></li>
-        <li><a href="#s6">產品決策</a></li>
-        <li><a href="#s7">UX 流程</a></li>
-        <li><a href="#s8">UI 設計</a></li>
-        <li><a href="#s9">設計系統</a></li>
-        <li><a href="#s10">產品迭代</a></li>
-        <li><a href="#s11">商業驗證</a></li>
-        <li><a href="#s12">專案回顧</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- 回首頁（左側錨點導覽由 case-study.js 依章節標題動態產生） -->
+  <a class="home-link" href="../" aria-label="回到作品集首頁">← 作品集</a>
 
   <main id="top">
 
@@ -814,120 +794,6 @@
     <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
   </div>
 
-  <script>
-    (function () {
-      // 依實際 header 高度設定 anchor 捲動偏移（比硬寫 CSS 值更精準）
-      var navEl = document.getElementById('nav');
-      function syncScrollPadding() {
-        if (navEl) {
-          document.documentElement.style.scrollPaddingTop = navEl.offsetHeight + 'px';
-        }
-      }
-      syncScrollPadding();
-      window.addEventListener('resize', syncScrollPadding);
-      window.addEventListener('load', syncScrollPadding);
-
-      // 圖片 Lightbox：點擊任一張圖放大檢視
-      var lb = document.getElementById('lightbox');
-      var lbImg = document.getElementById('lightboxImg');
-      var lbCap = document.getElementById('lightboxCaption');
-      var lbClose = document.getElementById('lightboxClose');
-
-      // 縮放狀態
-      var ZOOM_STEPS = [1, 1.6, 2.4, 3.4]; // 每次點擊放大一級，超過最後一級回到原尺寸
-      var zoomIndex = 0;
-      var panX = 0, panY = 0;
-
-      function applyTransform() {
-        lbImg.style.transform =
-          'translate(' + panX + 'px,' + panY + 'px) scale(' + ZOOM_STEPS[zoomIndex] + ')';
-        var last = zoomIndex === ZOOM_STEPS.length - 1;
-        lbImg.style.cursor = zoomIndex === 0 ? 'zoom-in' : (last ? 'zoom-out' : 'zoom-in');
-      }
-
-      function resetZoom() {
-        zoomIndex = 0;
-        panX = 0;
-        panY = 0;
-        lbImg.style.transition = 'transform 0.25s ease';
-        applyTransform();
-      }
-
-      function openLightbox(img) {
-        lbImg.src = img.currentSrc || img.src;
-        lbImg.alt = img.alt || '';
-        var fc = img.closest('figure').querySelector('figcaption');
-        lbCap.innerHTML = fc ? fc.innerHTML : '';
-        resetZoom();
-        lb.classList.add('is-open');
-        lb.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeLightbox() {
-        lb.classList.remove('is-open');
-        lb.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-        lbImg.removeAttribute('src');
-        resetZoom();
-      }
-
-      Array.prototype.forEach.call(document.querySelectorAll('figure img'), function (img) {
-        img.addEventListener('click', function () {
-          openLightbox(img);
-        });
-      });
-
-      // 進 lightbox 後，點擊圖片繼續放大一級（循環回原尺寸）
-      var dragging = false, moved = false, startX = 0, startY = 0, startPanX = 0, startPanY = 0;
-
-      lbImg.addEventListener('click', function (e) {
-        e.stopPropagation(); // 避免觸發背景關閉
-        if (moved) { moved = false; return; } // 剛剛是拖曳，不觸發縮放
-        zoomIndex = (zoomIndex + 1) % ZOOM_STEPS.length;
-        if (zoomIndex === 0) { panX = 0; panY = 0; }
-        lbImg.style.transition = 'transform 0.25s ease';
-        applyTransform();
-      });
-
-      // 放大後可拖曳平移
-      lbImg.addEventListener('mousedown', function (e) {
-        if (zoomIndex === 0) return;
-        e.preventDefault();
-        dragging = true;
-        moved = false;
-        startX = e.clientX;
-        startY = e.clientY;
-        startPanX = panX;
-        startPanY = panY;
-        lbImg.style.transition = 'none';
-        lbImg.style.cursor = 'grabbing';
-      });
-      window.addEventListener('mousemove', function (e) {
-        if (!dragging) return;
-        var dx = e.clientX - startX;
-        var dy = e.clientY - startY;
-        if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
-        panX = startPanX + dx;
-        panY = startPanY + dy;
-        applyTransform();
-      });
-      window.addEventListener('mouseup', function () {
-        if (!dragging) return;
-        dragging = false;
-        applyTransform(); // 還原游標
-      });
-
-      lbClose.addEventListener('click', closeLightbox);
-      // 點擊背景（非圖片本身）關閉
-      lb.addEventListener('click', function (e) {
-        if (e.target !== lbImg) closeLightbox();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (!lb.classList.contains('is-open')) return;
-        if (e.key === 'Escape') closeLightbox();
-      });
-    })();
-  </script>
+  <script src="../case-study.js" defer></script>
 </body>
 </html>
