@@ -498,6 +498,17 @@ figure img {
   cursor: zoom-in;
 }
 
+/* 影片素材：沿用圖片的響應式規範，但不套用 lightbox 縮放游標 */
+figure video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 78vh;
+  object-fit: contain;
+  margin-inline: auto;
+}
+
 /* 圖片佔位（尚未補圖時的視覺提示） */
 .figure__placeholder {
   aspect-ratio: 16 / 9;

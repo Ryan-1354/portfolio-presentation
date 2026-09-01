@@ -113,13 +113,31 @@
         <p class="eyebrow">Ch4 — Design Strategies</p>
         <h2 class="section-title">設計策略</h2>
         <p class="section-intro">策略發想始於競品分析：研究多間知名學校的資訊架構與視覺風格，作為與校方討論品牌方向的共同基礎，讓「現代」「精品」這類形容詞有具體參照，而不只是抽象描述。</p>
-        <p><a class="btn" href="https://www.figma.com/design/dlxymyGFUVhUVW86a13u6S/MimiCasa?node-id=8-2&t=bjBj4dqTQdkJedYa-1" target="_blank" rel="noopener">查看競品分析 ↗</a></p>
+        <p><a class="btn" href="https://www.figma.com/design/dlxymyGFUVhUVW86a13u6S/MimiCasa?node-id=1216-4919&t=bjBj4dqTQdkJedYa-1" target="_blank" rel="noopener">查看競品分析 ↗</a></p>
         <p>針對 Ch3 的三個問題，分別提出對應策略：</p>
 
         <div class="block">
           <p class="block__id">Strategy 01</p>
           <h3>人工報名流程的效率問題 → 數位化參觀預約流程</h3>
-          <p>將原本仰賴老師人工登記與管理的參觀預約作業，轉為線上預約流程，降低重複性行政工作對人力的占用。</p>
+          <div class="sub">
+            <h4>決策流程</h4>
+            <ol>
+              <li><strong>釐清業務需求</strong>：與業主確認預約流程所需的資料欄位，確保表單能涵蓋實際招生作業所需資訊。</li>
+              <li><strong>建立資料與業務邏輯</strong>：根據實際業務情境制定欄位邏輯，包括必填／非必填、是否可同時預約兩個校區，以及預計入學學年的選擇範圍。</li>
+              <li><strong>建立報名資料管理機制</strong>：以 Google Apps Script（GAS）串接 Google Sheets，建立輕量的報名資料庫，讓線上提交的預約資訊能自動記錄並供校方後續管理。</li>
+            </ol>
+          </div>
+          <figure>
+            <figcaption>數位化參觀預約流程 Demo</figcaption>
+            <video
+              src="../assets/mimicasa/數位化參觀預約流程.mp4"
+              poster="../assets/mimicasa/數位化參觀預約流程-poster.jpg"
+              muted
+              autoplay
+              loop
+              playsinline
+            ></video>
+          </figure>
         </div>
 
         <div class="block">
