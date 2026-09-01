@@ -1,63 +1,63 @@
 <svg viewBox="0 0 1100 460" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK TC">
-  <rect width="1100" height="460" fill="#141413"/>
+  <rect width="1100" height="460" fill="#FFFFFF"/>
 
   <!-- page container -->
-  <rect x="60" y="50" width="980" height="380" rx="6" fill="#1F1E1D" stroke="#3A3836"/>
+  <rect x="60" y="50" width="980" height="380" rx="6" fill="#F2EEE6" stroke="#D6D2C8"/>
 
   <!-- title + tabs -->
-  <text x="90" y="92" font-size="18" fill="#F5F2EA" font-weight="700">行程管理</text>
+  <text x="90" y="92" font-size="18" fill="#1C1B1A" font-weight="700">行程管理</text>
 
   <g font-size="13">
-    <text x="90" y="128" fill="#8B877F">草稿</text>
-    <rect x="150" y="110" width="70" height="28" rx="14" fill="#292722" stroke="#C9B896" stroke-width="1.2"/>
-    <text x="185" y="128" fill="#F5F2EA" text-anchor="middle" font-weight="600">已上架</text>
-    <text x="250" y="128" fill="#8B877F">已下架</text>
+    <text x="90" y="128" fill="#6E6A62">草稿</text>
+    <rect x="150" y="110" width="70" height="28" rx="14" fill="#E8E3D9" stroke="#8A7638" stroke-width="1.2"/>
+    <text x="185" y="128" fill="#1C1B1A" text-anchor="middle" font-weight="600">已上架</text>
+    <text x="250" y="128" fill="#6E6A62">已下架</text>
   </g>
-  <line x1="90" y1="150" x2="1010" y2="150" stroke="#3A3836"/>
+  <line x1="90" y1="150" x2="1010" y2="150" stroke="#D6D2C8"/>
 
   <!-- table header -->
-  <g font-size="12" fill="#8B877F">
+  <g font-size="12" fill="#6E6A62">
     <text x="90" y="180">行程名稱</text>
     <text x="330" y="180">共同編輯</text>
     <text x="540" y="180">聯絡窗口</text>
     <text x="750" y="180">分類標籤</text>
   </g>
-  <line x1="90" y1="192" x2="1010" y2="192" stroke="#3A3836"/>
+  <line x1="90" y1="192" x2="1010" y2="192" stroke="#D6D2C8"/>
 
   <!-- row 1 -->
-  <rect x="90" y="210" width="56" height="56" rx="4" fill="#141413" stroke="#3A3836"/>
-  <line x1="90" y1="210" x2="146" y2="266" stroke="#3A3836"/>
-  <line x1="146" y1="210" x2="90" y2="266" stroke="#3A3836"/>
-  <text x="164" y="243" font-size="14" fill="#F5F2EA" font-weight="600">— 行程名稱 —</text>
+  <rect x="90" y="210" width="56" height="56" rx="4" fill="#FFFFFF" stroke="#D6D2C8"/>
+  <line x1="90" y1="210" x2="146" y2="266" stroke="#D6D2C8"/>
+  <line x1="146" y1="210" x2="90" y2="266" stroke="#D6D2C8"/>
+  <text x="164" y="243" font-size="14" fill="#1C1B1A" font-weight="600">— 行程名稱 —</text>
 
-  <rect x="330" y="222" width="150" height="32" rx="4" fill="#141413" stroke="#3A3836"/>
-  <text x="342" y="243" font-size="12" fill="#8B877F">選擇會員</text>
-  <polygon points="460,239 468,239 464,245" fill="#8B877F"/>
+  <rect x="330" y="222" width="150" height="32" rx="4" fill="#FFFFFF" stroke="#D6D2C8"/>
+  <text x="342" y="243" font-size="12" fill="#6E6A62">選擇會員</text>
+  <polygon points="460,239 468,239 464,245" fill="#6E6A62"/>
 
-  <rect x="540" y="222" width="150" height="32" rx="4" fill="#141413" stroke="#3A3836"/>
-  <text x="552" y="243" font-size="12" fill="#8B877F">選擇窗口</text>
-  <polygon points="670,239 678,239 674,245" fill="#8B877F"/>
+  <rect x="540" y="222" width="150" height="32" rx="4" fill="#FFFFFF" stroke="#D6D2C8"/>
+  <text x="552" y="243" font-size="12" fill="#6E6A62">選擇窗口</text>
+  <polygon points="670,239 678,239 674,245" fill="#6E6A62"/>
 
-  <rect x="750" y="224" width="80" height="28" rx="14" fill="#292722" stroke="#3A3836"/>
-  <text x="790" y="243" font-size="11" fill="#F5F2EA" text-anchor="middle">標籤 A</text>
-  <rect x="840" y="224" width="80" height="28" rx="14" fill="#292722" stroke="#3A3836"/>
-  <text x="880" y="243" font-size="11" fill="#F5F2EA" text-anchor="middle">標籤 B</text>
+  <rect x="750" y="224" width="80" height="28" rx="14" fill="#E8E3D9" stroke="#D6D2C8"/>
+  <text x="790" y="243" font-size="11" fill="#1C1B1A" text-anchor="middle">標籤 A</text>
+  <rect x="840" y="224" width="80" height="28" rx="14" fill="#E8E3D9" stroke="#D6D2C8"/>
+  <text x="880" y="243" font-size="11" fill="#1C1B1A" text-anchor="middle">標籤 B</text>
 
   <!-- action icon: delete only -->
-  <g stroke="#8B877F" stroke-width="1.4" fill="none" stroke-linecap="round">
+  <g stroke="#6E6A62" stroke-width="1.4" fill="none" stroke-linecap="round">
     <line x1="980" y1="238" x2="980" y2="250"/>
     <path d="M974 238 H986 M976 238 V235 H984 V238 M975 238 L976 251 H984 L985 238"/>
   </g>
 
-  <line x1="90" y1="286" x2="1010" y2="286" stroke="#3A3836"/>
+  <line x1="90" y1="286" x2="1010" y2="286" stroke="#D6D2C8"/>
 
   <!-- row 2 (ghost row to imply list) -->
-  <rect x="90" y="304" width="56" height="40" rx="4" fill="#141413" stroke="#3A3836" opacity="0.5"/>
-  <rect x="164" y="316" width="140" height="14" rx="2" fill="#292722" opacity="0.6"/>
-  <rect x="330" y="316" width="150" height="16" rx="3" fill="#292722" opacity="0.4"/>
-  <rect x="540" y="316" width="150" height="16" rx="3" fill="#292722" opacity="0.4"/>
-  <rect x="750" y="314" width="70" height="20" rx="10" fill="#292722" opacity="0.4"/>
+  <rect x="90" y="304" width="56" height="40" rx="4" fill="#FFFFFF" stroke="#D6D2C8" opacity="0.5"/>
+  <rect x="164" y="316" width="140" height="14" rx="2" fill="#E8E3D9" opacity="0.6"/>
+  <rect x="330" y="316" width="150" height="16" rx="3" fill="#E8E3D9" opacity="0.4"/>
+  <rect x="540" y="316" width="150" height="16" rx="3" fill="#E8E3D9" opacity="0.4"/>
+  <rect x="750" y="314" width="70" height="20" rx="10" fill="#E8E3D9" opacity="0.4"/>
 
-  <text x="90" y="386" font-size="11" fill="#8B877F">依生命週期分頁篩選，行程列表以固定筆數分頁呈現，非無限滾動載入</text>
+  <text x="90" y="386" font-size="11" fill="#6E6A62">依生命週期分頁篩選，行程列表以固定筆數分頁呈現，非無限滾動載入</text>
 
 </svg>

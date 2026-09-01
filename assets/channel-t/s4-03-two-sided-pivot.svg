@@ -1,37 +1,37 @@
 <svg viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK TC">
-  <rect width="1000" height="480" fill="#141413"/>
+  <rect width="1000" height="480" fill="#FFFFFF"/>
 
-  <text x="60" y="66" font-size="15" fill="#C9B896" font-weight="600">目標客群重新定義：從需求端單獨，到供需雙邊</text>
+  <text x="60" y="66" font-size="15" fill="#8A7638" font-weight="600">目標客群重新定義：從需求端單獨，到供需雙邊</text>
 
   <!-- Bar chart -->
   <!-- baseline -->
-  <line x1="120" y1="330" x2="880" y2="330" stroke="#3A3836" stroke-width="1"/>
+  <line x1="120" y1="330" x2="880" y2="330" stroke="#D6D2C8" stroke-width="1"/>
 
   <!-- Bar 1: demand only -->
-  <rect x="200" y="230" width="140" height="100" fill="#1F1E1D" stroke="#3A3836"/>
-  <text x="270" y="216" font-size="20" fill="#C7C2B8" text-anchor="middle" font-weight="700">125.5 萬</text>
-  <text x="270" y="356" font-size="13" fill="#8B877F" text-anchor="middle">需求端單獨</text>
-  <text x="270" y="374" font-size="12" fill="#8B877F" text-anchor="middle">（牛頭＋旅行社業務）</text>
+  <rect x="200" y="230" width="140" height="100" fill="#F2EEE6" stroke="#D6D2C8"/>
+  <text x="270" y="216" font-size="20" fill="#454340" text-anchor="middle" font-weight="700">125.5 萬</text>
+  <text x="270" y="356" font-size="13" fill="#6E6A62" text-anchor="middle">需求端單獨</text>
+  <text x="270" y="374" font-size="12" fill="#6E6A62" text-anchor="middle">（牛頭＋旅行社業務）</text>
 
   <!-- Bar 2: combined -->
-  <rect x="440" y="130" width="140" height="200" fill="#1F1E1D" stroke="#C9B896" stroke-width="1.5"/>
-  <rect x="440" y="230" width="140" height="100" fill="#292722"/>
-  <text x="510" y="116" font-size="24" fill="#F5F2EA" text-anchor="middle" font-weight="700">233 萬</text>
-  <text x="510" y="356" font-size="13" fill="#F5F2EA" text-anchor="middle" font-weight="600">供需雙邊合計</text>
-  <text x="510" y="374" font-size="12" fill="#8B877F" text-anchor="middle">（含供給端貢獻 107.3 萬）</text>
+  <rect x="440" y="130" width="140" height="200" fill="#F2EEE6" stroke="#8A7638" stroke-width="1.5"/>
+  <rect x="440" y="230" width="140" height="100" fill="#E8E3D9"/>
+  <text x="510" y="116" font-size="24" fill="#1C1B1A" text-anchor="middle" font-weight="700">233 萬</text>
+  <text x="510" y="356" font-size="13" fill="#1C1B1A" text-anchor="middle" font-weight="600">供需雙邊合計</text>
+  <text x="510" y="374" font-size="12" fill="#6E6A62" text-anchor="middle">（含供給端貢獻 107.3 萬）</text>
 
   <!-- delta annotation -->
-  <line x1="600" y1="140" x2="650" y2="140" stroke="#C9B896" stroke-width="1"/>
-  <line x1="650" y1="140" x2="650" y2="230" stroke="#C9B896" stroke-width="1" stroke-dasharray="3 3"/>
-  <text x="662" y="190" font-size="12" fill="#C9B896">供給端貢獻</text>
-  <text x="662" y="206" font-size="12" fill="#C9B896">＋107.3 萬</text>
+  <line x1="600" y1="140" x2="650" y2="140" stroke="#8A7638" stroke-width="1"/>
+  <line x1="650" y1="140" x2="650" y2="230" stroke="#8A7638" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="662" y="190" font-size="12" fill="#8A7638">供給端貢獻</text>
+  <text x="662" y="206" font-size="12" fill="#8A7638">＋107.3 萬</text>
 
   <!-- threshold line -->
-  <line x1="120" y1="230" x2="880" y2="230" stroke="#8B877F" stroke-width="1" stroke-dasharray="4 4"/>
-  <text x="890" y="234" font-size="11" fill="#8B877F">維運門檻參考線</text>
+  <line x1="120" y1="230" x2="880" y2="230" stroke="#6E6A62" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="890" y="234" font-size="11" fill="#6E6A62">維運門檻參考線</text>
 
   <!-- conclusion box -->
-  <rect x="60" y="404" width="880" height="60" rx="4" fill="#1F1E1D" stroke="#3A3836"/>
-  <text x="86" y="428" font-size="13" fill="#C7C2B8">結論：僅服務需求端無法支撐公司營運，目標客群須擴大至供需雙邊；</text>
-  <text x="86" y="448" font-size="13" fill="#C7C2B8">但雙邊市場「供給先於需求」，執行策略上優先投入供給端建置。</text>
+  <rect x="60" y="404" width="880" height="60" rx="4" fill="#F2EEE6" stroke="#D6D2C8"/>
+  <text x="86" y="428" font-size="13" fill="#454340">結論：僅服務需求端無法支撐公司營運，目標客群須擴大至供需雙邊；</text>
+  <text x="86" y="448" font-size="13" fill="#454340">但雙邊市場「供給先於需求」，執行策略上優先投入供給端建置。</text>
 </svg>
