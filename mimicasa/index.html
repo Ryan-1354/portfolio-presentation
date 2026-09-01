@@ -158,8 +158,20 @@
 
         <div class="block">
           <p class="block__id">Strategy 03</p>
-          <h3>視覺定位落差 → 以 Claude Design 探索視覺、以 Figma Design Token 建立品牌視覺系統</h3>
-          <p>從目標受眾出發：潛在客戶多半願意為教育品質付費，對校園空間與服務品質有較高期待，品牌方向因此定調為現代、精品、具質感。這段直接用 Claude Design 快速產出多組視覺方向提案，收斂出最終方向後，再以 Figma 建立 Design Token，作為後續介面設計的共同語言。</p>
+          <h3>視覺定位落差 → 透過 Claude Design 快速且大量探索品牌視覺方向</h3>
+          <div class="sub">
+            <h4>決策流程</h4>
+            <ol>
+              <li><strong>定調品牌調性</strong>：確立品牌視覺語言的核心方向：現代、精品、具質感。</li>
+              <li><strong>以 Claude Design 探索並收斂視覺方向</strong>：透過 Claude Design 快速產出多組視覺方向提案，作為與業主討論與對齊品牌視覺偏好的媒介，經過探索與收斂後確立最終方向。</li>
+              <li><strong>以 Figma 建立 Design Token</strong>：將收斂後的視覺方向轉化為 Design Token，作為後續介面設計的共同語言，確保品牌視覺在不同頁面與元件中的一致性。</li>
+            </ol>
+          </div>
+          <figure>
+            <figcaption>以 Claude Design 探索視覺方向，收斂後以 Figma Design Token 建立品牌視覺系統</figcaption>
+            <img src="../assets/mimicasa/ch4-strategy-03.jpg" alt="Claude Design 視覺方向探索與 Figma Design Token 品牌視覺系統" />
+          </figure>
+          <p><a class="btn" href="https://www.figma.com/design/dlxymyGFUVhUVW86a13u6S/MimiCasa?node-id=78-1764&t=bjBj4dqTQdkJedYa-1" target="_blank" rel="noopener">查看完整核心樣式 ↗</a></p>
         </div>
       </div>
     </section>
@@ -189,11 +201,22 @@
             <h4>折衷</h4>
             <p>改為在「切換 App 後返回頁面」時觸發 Snackbar。使用者截圖後通常會去傳給朋友，返回網站的那一刻，正是分享意圖最強的時刻。</p>
           </div>
+          <figure>
+            <figcaption>分享 Snackbar 互動 Demo</figcaption>
+            <video
+              src="../assets/mimicasa/分享 Snackbar.mp4"
+              poster="../assets/mimicasa/分享 Snackbar-poster.jpg"
+              muted
+              autoplay
+              loop
+              playsinline
+            ></video>
+          </figure>
         </div>
 
         <div class="block">
           <p class="block__id">02</p>
-          <h3>報名表單邏輯</h3>
+          <h3>報名表單互動邏輯</h3>
           <div class="sub">
             <h4>降低開啟與中斷成本</h4>
             <p>預約表單採 Modal，而非獨立頁面，降低開啟成本；中途離開時，以 <code>sessionStorage</code> 暫存已填內容，重新開啟即可恢復，送出成功後才清除。</p>
@@ -206,6 +229,17 @@
             <h4>電話格式驗證</h4>
             <p>自動判斷市話／手機並切換輸入格式，同時阻擋連續數字與錯誤字元數。對招生而言，一個無效電話號碼就可能代表一筆無法聯繫的潛在客戶。</p>
           </div>
+          <figure>
+            <figcaption>報名表單互動邏輯 Demo</figcaption>
+            <video
+              src="../assets/mimicasa/報名表單互動邏輯.mp4"
+              poster="../assets/mimicasa/報名表單互動邏輯-poster.jpg"
+              muted
+              autoplay
+              loop
+              playsinline
+            ></video>
+          </figure>
         </div>
 
         <div class="block">
@@ -213,6 +247,17 @@
           <h3>Blur-up／LQIP 圖片處理</h3>
           <p>圖片載入原先採用 Blur-up 過渡，但它只能處理「真圖載入完成」的瞬間；在取得真圖之前，畫面仍然是空白。</p>
           <p>因此加入 LQIP（Low Quality Image Placeholder），預先內嵌模糊縮圖作為底圖，讓使用者從圖片載入的第一刻就獲得視覺回饋，降低等待感並維持瀏覽體驗。</p>
+          <figure>
+            <figcaption>Blur-up／LQIP 圖片載入處理 Demo</figcaption>
+            <video
+              src="../assets/mimicasa/圖片處理.mp4"
+              poster="../assets/mimicasa/圖片處理-poster.jpg"
+              muted
+              autoplay
+              loop
+              playsinline
+            ></video>
+          </figure>
         </div>
       </div>
     </section>
@@ -343,6 +388,13 @@
       <span>Ryan Wu · 產品設計師 × AI 協作開發 · 2026</span>
     </div>
   </footer>
+
+  <!-- ====================== LIGHTBOX ====================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="圖片檢視">
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="關閉">×</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+    <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+  </div>
 
   <script src="../case-study.js?v=8" defer></script>
 </body>
