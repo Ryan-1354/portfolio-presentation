@@ -39,24 +39,19 @@
 
   <!-- ===== Layer 1: 首頁 ===== -->
   <rect x="40" y="206" width="920" height="150" rx="4" fill="none" stroke="#D6D2C8" stroke-dasharray="4 4"/>
-  <text x="60" y="234" font-size="15" fill="#8A7638" font-weight="600">第一層｜首頁 — 三種行程搜尋方式</text>
+  <text x="60" y="234" font-size="15" fill="#8A7638" font-weight="600">第一層｜首頁 — 兩種行程搜尋方式</text>
 
-  <rect x="60" y="252" width="280" height="86" rx="4" fill="#F2EEE6" stroke="#D6D2C8"/>
-  <text x="200" y="278" font-size="16" fill="#1C1B1A" text-anchor="middle" font-weight="600">導覽搜尋</text>
-  <text x="200" y="300" font-size="12" fill="#6E6A62" text-anchor="middle">符合既有找團習慣</text>
-  <text x="200" y="318" font-size="12" fill="#6E6A62" text-anchor="middle">洲別／國家／城市逐步探索</text>
+  <rect x="200" y="252" width="280" height="86" rx="4" fill="#F2EEE6" stroke="#D6D2C8"/>
+  <text x="340" y="278" font-size="16" fill="#1C1B1A" text-anchor="middle" font-weight="600">導覽搜尋</text>
+  <text x="340" y="300" font-size="12" fill="#6E6A62" text-anchor="middle">符合既有找團習慣</text>
+  <text x="340" y="318" font-size="12" fill="#6E6A62" text-anchor="middle">洲別／國家／城市逐步探索</text>
 
-  <rect x="360" y="252" width="280" height="86" rx="4" fill="#F2EEE6" stroke="#8A7638" stroke-width="1.5"/>
-  <text x="500" y="278" font-size="16" fill="#1C1B1A" text-anchor="middle" font-weight="600">AI 智能推薦</text>
-  <text x="500" y="300" font-size="12" fill="#6E6A62" text-anchor="middle">產品核心搜尋能力</text>
-  <text x="500" y="318" font-size="12" fill="#6E6A62" text-anchor="middle">自然語言描述需求</text>
+  <rect x="520" y="252" width="280" height="86" rx="4" fill="#F2EEE6" stroke="#D6D2C8"/>
+  <text x="660" y="278" font-size="16" fill="#1C1B1A" text-anchor="middle" font-weight="600">關鍵字搜尋</text>
+  <text x="660" y="300" font-size="12" fill="#6E6A62" text-anchor="middle">目的明確的快速查找</text>
+  <text x="660" y="318" font-size="12" fill="#6E6A62" text-anchor="middle">低學習成本入口</text>
 
-  <rect x="660" y="252" width="280" height="86" rx="4" fill="#F2EEE6" stroke="#D6D2C8"/>
-  <text x="800" y="278" font-size="16" fill="#1C1B1A" text-anchor="middle" font-weight="600">關鍵字搜尋</text>
-  <text x="800" y="300" font-size="12" fill="#6E6A62" text-anchor="middle">目的明確的快速查找</text>
-  <text x="800" y="318" font-size="12" fill="#6E6A62" text-anchor="middle">低學習成本入口</text>
-
-  <text x="500" y="384" font-size="12" fill="#6E6A62" text-anchor="middle">導覽搜尋與 AI 智能推薦處於較高資訊層級，關鍵字搜尋保留於首頁作為熟悉入口</text>
+  <text x="500" y="384" font-size="12" fill="#6E6A62" text-anchor="middle">導覽搜尋處於較高資訊層級，關鍵字搜尋保留於首頁作為熟悉入口</text>
 
   <!-- connector -->
   <line x1="500" y1="400" x2="500" y2="440" stroke="#D6D2C8" stroke-width="1.5"/>

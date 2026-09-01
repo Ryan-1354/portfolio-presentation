@@ -374,17 +374,6 @@
           <h3>Wireframe</h3>
           <p>完成使用者流程後，我進一步將前期研究、產品決策與 User Flow 轉化為 Wireframe，先確認資訊架構、資訊層級與操作邏輯，再進入高擬真 UI 設計。這個階段我沒有逐一展示所有 MVP 功能，而是聚焦於三個最能代表產品核心價值的流程：行程上架、行程管理與行程資訊頁。三者分別對應供給端建立內容、平台整理與分發內容，以及需求端搜尋與判斷內容的核心任務。</p>
 
-          <figure>
-            <img src="../assets/channel-t/s7-03-wireframe-upload.svg" width="1200" height="640" alt="行程上架流程的 Wireframe 線框圖：從原始檔案上傳、AI 解析到資訊核對與人工修正的資訊層級與操作邏輯" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="figure__placeholder" style="display:none; aspect-ratio: 1200 / 640;">行程上架 Wireframe — assets/channel-t/s7-03-wireframe-upload.svg</div>
-            <figcaption>行程上架 Wireframe：原始檔案 → AI 解析 → 資訊核對 → 人工修正。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
-          </figure>
-          <figure>
-            <img src="../assets/channel-t/s7-03-wireframe-management.svg" width="1100" height="460" alt="行程管理流程的 Wireframe 線框圖：以草稿、待上架、已上架、已下架狀態分類行程，並設定共同編輯者與聯絡窗口" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="figure__placeholder" style="display:none; aspect-ratio: 1100 / 460;">行程管理 Wireframe — assets/channel-t/s7-03-wireframe-management.svg</div>
-            <figcaption>行程管理 Wireframe：依生命週期狀態分類，設定協作者與聯絡窗口。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
-          </figure>
-
           <div class="sub">
             <h4><span class="sub__num">01</span>行程上架</h4>
             <p>行程上架是供給端最核心的工作流程，因此 Wireframe 首先聚焦於如何降低供應商建立行程的操作成本。流程從原始行程檔案上傳開始，經過 AI 解析，再進入資訊核對與人工修正，最後完成行程上架：</p>
@@ -397,17 +386,32 @@
             </ul>
             <p>在資訊核對頁中，我將原始行程檔案與 AI 解析結果放在同一操作情境中，讓使用者可以直接對照原始資料確認解析內容，並個別修改行程名稱、出發地、出發日期、價格等關鍵資訊。針對同一母團可能對應多個出發日期的情境，出發日期採多選設計；同業價格則以最低價格搭配「起」呈現，降低使用者逐一處理不同子團的操作負擔。</p>
             <blockquote><p>讓 AI 負責加速資料整理，使用者保留最終確認與修正的權限。</p></blockquote>
+            <figure>
+              <img src="../assets/channel-t/s7-03-wireframe-upload.svg" width="1200" height="640" alt="行程上架流程的 Wireframe 線框圖：從原始檔案上傳、AI 解析到資訊核對與人工修正的資訊層級與操作邏輯" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="figure__placeholder" style="display:none; aspect-ratio: 1200 / 640;">行程上架 Wireframe — assets/channel-t/s7-03-wireframe-upload.svg</div>
+              <figcaption>行程上架 Wireframe：原始檔案 → AI 解析 → 資訊核對 → 人工修正。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
+            </figure>
           </div>
 
           <div class="sub">
             <h4><span class="sub__num">02</span>行程管理</h4>
             <p>完成行程建立後，我進一步設計行程管理流程，讓供給端可以掌握行程從建立到分銷的不同階段。行程依生命週期區分為草稿、待上架、已上架、已下架，透過狀態切換，使用者可以快速篩選不同階段的行程，降低在大量行程中尋找特定內容的成本。此外，行程管理也承接前期使用者研究中發現的協作需求，每筆行程可以設定共同編輯者與聯絡窗口，將前面定義的協作權限與會員身份邏輯轉化為實際操作。</p>
             <p>第一版設計中，我將<strong>行程標籤</strong>作為行程管理的重要資料結構，供給端完成行程建立後可以設定對應標籤，系統再依標籤將行程歸入導覽搜尋的分類架構；這些標籤同時也作為 AI 智能推薦的資料基礎，讓平台能將行程內容與需求端的搜尋需求建立關聯。第一版的產品邏輯為：<strong>行程建立 → 使用者設定標籤 → 系統分類 → 導覽搜尋／AI 推薦</strong>。</p>
+            <figure>
+              <img src="../assets/channel-t/s7-03-wireframe-management.svg" width="1100" height="460" alt="行程管理流程的 Wireframe 線框圖：以草稿、待上架、已上架、已下架狀態分類行程，並設定共同編輯者與聯絡窗口" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="figure__placeholder" style="display:none; aspect-ratio: 1100 / 460;">行程管理 Wireframe — assets/channel-t/s7-03-wireframe-management.svg</div>
+              <figcaption>行程管理 Wireframe：依生命週期狀態分類，設定協作者與聯絡窗口。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
+            </figure>
           </div>
 
           <div class="sub">
             <h4><span class="sub__num">03</span>行程資訊頁</h4>
             <p>需求端的核心任務是快速找到適合的行程，因此我將 Wireframe 延伸至「搜尋結果 → 行程資訊頁」的完整瀏覽流程。在行程資訊頁中，我優先整理 B2B 使用者判斷行程時所需要的核心資訊，並建立清楚的資訊層級，讓使用者能在單一頁面快速確認行程是否符合需求。設計時特別考量：行程名稱與特色、優惠方案、出發地、出發日期、建議直售價、同業價、旅行社資訊（名稱、窗口、聯絡資訊），讓使用者從搜尋結果進入行程資訊頁後，可以快速完成初步判斷，並進一步與供給方進行分銷溝通。</p>
+            <figure>
+              <img src="../assets/channel-t/s7-03-wireframe-result.svg" width="1200" height="1508" alt="行程資訊頁的 Wireframe 線框圖：從搜尋結果到行程資訊頁的完整瀏覽流程，呈現核心資訊層級與判斷依據" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="figure__placeholder" style="display:none; aspect-ratio: 1200 / 1508;">行程資訊頁 Wireframe — assets/channel-t/s7-03-wireframe-result.svg</div>
+              <figcaption>行程資訊頁 Wireframe：搜尋結果 → 行程資訊頁，建立 B2B 判斷所需的資訊層級。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
+            </figure>
           </div>
 
           <p><strong>這三個流程分別對應產品的核心內容循環：</strong>行程上架（供給端建立內容）→ 行程管理（平台整理、分類與管理內容）→ 行程資訊頁（需求端搜尋、判斷與使用內容）</p>
