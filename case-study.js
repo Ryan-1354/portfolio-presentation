@@ -24,6 +24,11 @@
   function scrollToId(id, behavior) {
     var el = document.getElementById(id);
     if (!el) return;
+    /* hero（TOP）直接回到頁面最頂端 */
+    if (el.classList.contains('hero')) {
+      window.scrollTo({ top: 0, behavior: behavior || 'auto' });
+      return;
+    }
     var container = el.querySelector('.container');
     var anchorEl = (container && container.firstElementChild) || container || el;
     var y = anchorEl.getBoundingClientRect().top + window.pageYOffset - SCROLL_OFFSET;
@@ -74,6 +79,19 @@
 
       var list = document.createElement('ul');
       list.className = 'sidenav__list';
+
+      /* 第一個導覽項目：TOP，點擊回到 hero */
+      var hero = main.querySelector('.hero[id]');
+      if (hero) {
+        var topLi = document.createElement('li');
+        var topA = document.createElement('a');
+        topA.className = 'sidenav__link';
+        topA.href = '#' + hero.id;
+        topA.textContent = 'TOP';
+        topLi.appendChild(topA);
+        list.appendChild(topLi);
+        items.push({ id: hero.id, el: hero, link: topA });
+      }
 
       Array.prototype.forEach.call(titleEls, function (titleEl) {
         var section = titleEl.closest('section[id]');
