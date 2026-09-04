@@ -8,9 +8,16 @@
 
   var main = document.querySelector('main');
 
-  /* 案例研究頁沒有固定頂部導覽，錨點捲動偏移改小即可 */
-  var SCROLL_OFFSET = 40;
-  document.documentElement.style.scrollPaddingTop = SCROLL_OFFSET + 'px';
+  /* 錨點捲動偏移：桌機（≥1320px）無固定頂部導覽，用較小值；
+     手機／平板有固定頂部列，需加大以免 section 標題被頂部列遮住 */
+  function scrollOffset() {
+    return window.innerWidth < 1320 ? 72 : 40;
+  }
+  function syncScrollPadding() {
+    document.documentElement.style.scrollPaddingTop = scrollOffset() + 'px';
+  }
+  syncScrollPadding();
+  window.addEventListener('resize', syncScrollPadding);
 
   /* ------------------------------------------------------------------
      錨點捲動：讓跳轉後 section 的標題貼近視窗頂端。
@@ -31,7 +38,7 @@
     }
     var container = el.querySelector('.container');
     var anchorEl = (container && container.firstElementChild) || container || el;
-    var y = anchorEl.getBoundingClientRect().top + window.pageYOffset - SCROLL_OFFSET;
+    var y = anchorEl.getBoundingClientRect().top + window.pageYOffset - scrollOffset();
     if (y < 0) y = 0;
     window.scrollTo({ top: y, behavior: behavior || 'auto' });
   }
@@ -127,7 +134,9 @@
           }
         }
         for (var j = 0; j < items.length; j++) {
-          items[j].link.classList.toggle('is-active', items[j].id === currentId);
+          var on = items[j].id === currentId;
+          items[j].link.classList.toggle('is-active', on);
+          if (items[j].mlink) items[j].mlink.classList.toggle('is-active', on);
         }
       }
 
@@ -140,6 +149,86 @@
 
       window.addEventListener('scroll', requestUpdate, { passive: true });
       window.addEventListener('resize', requestUpdate);
+      updateActive();
+
+      /* ----------------------------------------------------------------
+         手機／平板固定頂部列：左側返回、右側 hamburger 展開章節導覽。
+         桌機（≥1320px）維持 .home-link + .sidenav，頂部列以 CSS 隱藏。
+         ---------------------------------------------------------------- */
+      var homeLink = document.querySelector('.home-link');
+
+      var bar = document.createElement('header');
+      bar.className = 'cs-topbar';
+
+      var back = document.createElement('a');
+      back.className = 'cs-topbar__back';
+      back.href = homeLink ? homeLink.getAttribute('href') : '../#work';
+      back.textContent = homeLink
+        ? (homeLink.textContent || '').trim()
+        : '← 案例研究';
+
+      var toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'cs-topbar__toggle';
+      toggle.setAttribute('aria-label', '章節導覽');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.innerHTML = '<span></span><span></span><span></span>';
+
+      bar.appendChild(back);
+      bar.appendChild(toggle);
+
+      var menu = document.createElement('nav');
+      menu.className = 'cs-menu';
+      menu.setAttribute('aria-label', '章節導覽');
+      var menuList = document.createElement('ul');
+      menuList.className = 'cs-menu__list';
+      items.forEach(function (it) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.className = 'cs-menu__link';
+        a.href = '#' + it.id;
+        a.textContent = it.link.textContent;
+        li.appendChild(a);
+        menuList.appendChild(li);
+        it.mlink = a;
+      });
+      menu.appendChild(menuList);
+
+      var backdrop = document.createElement('div');
+      backdrop.className = 'cs-menu__backdrop';
+
+      document.body.appendChild(bar);
+      document.body.appendChild(backdrop);
+      document.body.appendChild(menu);
+
+      function closeMenu() {
+        menu.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+      function openMenu() {
+        menu.classList.add('is-open');
+        backdrop.classList.add('is-open');
+        toggle.classList.add('is-active');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+      toggle.addEventListener('click', function () {
+        if (menu.classList.contains('is-open')) closeMenu();
+        else openMenu();
+      });
+      backdrop.addEventListener('click', closeMenu);
+      /* 點任一章節連結後關閉（捲動由全域 hash handler 處理） */
+      menu.addEventListener('click', function (e) {
+        if (e.target.closest('a')) closeMenu();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+      /* 視窗放大到桌機尺寸時關閉，避免殘留開啟狀態 */
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 1320) closeMenu();
+      });
       updateActive();
     }
   }
