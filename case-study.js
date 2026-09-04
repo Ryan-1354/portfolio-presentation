@@ -206,12 +206,14 @@
         backdrop.classList.remove('is-open');
         toggle.classList.remove('is-active');
         toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
       }
       function openMenu() {
         menu.classList.add('is-open');
         backdrop.classList.add('is-open');
         toggle.classList.add('is-active');
         toggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
       }
       toggle.addEventListener('click', function () {
         if (menu.classList.contains('is-open')) closeMenu();
