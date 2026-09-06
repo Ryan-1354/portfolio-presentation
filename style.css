@@ -958,12 +958,35 @@ figcaption {
 }
 
 .sidenav__link {
-  display: block;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
   font-size: 13px;
   line-height: 1.45;
   letter-spacing: 0.02em;
   color: var(--stone-500);
   transition: color 0.2s ease;
+}
+
+.sidenav__num {
+  flex: none;
+  min-width: 2.2em;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+  color: var(--stone-500);
+  opacity: 0.6;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.sidenav__link:hover .sidenav__num,
+.sidenav__link.is-active .sidenav__num {
+  opacity: 1;
+}
+
+.sidenav__link:hover .sidenav__num,
+.sidenav__link.is-active .sidenav__num {
+  color: var(--sand);
 }
 
 .sidenav__link:hover {
@@ -1093,7 +1116,9 @@ figcaption {
     margin: 0;
   }
   .cs-menu__link {
-    display: block;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
     padding: 11px 14px;
     font-size: 14px;
     line-height: 1.4;
@@ -1101,11 +1126,23 @@ figcaption {
     border-radius: var(--radius);
     transition: background-color 0.15s ease, color 0.15s ease;
   }
+  .cs-menu__num {
+    flex: none;
+    min-width: 2.4em;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.06em;
+    color: var(--stone-500);
+    transition: color 0.15s ease;
+  }
   .cs-menu__link:hover {
     background-color: var(--stone-800);
     color: var(--stone-100);
   }
   .cs-menu__link.is-active {
+    color: var(--sand);
+  }
+  .cs-menu__link.is-active .cs-menu__num {
     color: var(--sand);
   }
 

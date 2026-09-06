@@ -87,6 +87,27 @@
       var list = document.createElement('ul');
       list.className = 'sidenav__list';
 
+      /* 從內文 .eyebrow 取章節編號（"—" 前的字，如 Ch1 / 01 / S2）以保持一致 */
+      function sectionNum(section) {
+        var eb = section.querySelector('.eyebrow');
+        if (!eb) return '';
+        var t = (eb.textContent || '').trim();
+        var m = t.split(/\s*[—–-]\s*/)[0].trim();
+        return m || '';
+      }
+      function fillLink(link, num, label) {
+        if (num) {
+          var ns = document.createElement('span');
+          ns.className = 'sidenav__num';
+          ns.textContent = num;
+          link.appendChild(ns);
+        }
+        var ls = document.createElement('span');
+        ls.className = 'sidenav__label';
+        ls.textContent = label;
+        link.appendChild(ls);
+      }
+
       /* 第一個導覽項目：TOP，點擊回到 hero */
       var hero = main.querySelector('.hero[id]');
       if (hero) {
@@ -94,25 +115,28 @@
         var topA = document.createElement('a');
         topA.className = 'sidenav__link';
         topA.href = '#' + hero.id;
-        topA.textContent = 'TOP';
+        fillLink(topA, '', 'TOP');
         topLi.appendChild(topA);
         list.appendChild(topLi);
-        items.push({ id: hero.id, el: hero, link: topA });
+        items.push({ id: hero.id, el: hero, link: topA, num: '', label: 'TOP' });
       }
 
       Array.prototype.forEach.call(titleEls, function (titleEl) {
         var section = titleEl.closest('section[id]');
         if (!section) return;
 
+        var num = sectionNum(section);
+        var label = (titleEl.textContent || '').trim();
+
         var li = document.createElement('li');
         var a = document.createElement('a');
         a.className = 'sidenav__link';
         a.href = '#' + section.id;
-        a.textContent = (titleEl.textContent || '').trim();
+        fillLink(a, num, label);
         li.appendChild(a);
         list.appendChild(li);
 
-        items.push({ id: section.id, el: section, link: a });
+        items.push({ id: section.id, el: section, link: a, num: num, label: label });
       });
 
       nav.appendChild(list);
@@ -187,7 +211,16 @@
         var a = document.createElement('a');
         a.className = 'cs-menu__link';
         a.href = '#' + it.id;
-        a.textContent = it.link.textContent;
+        if (it.num) {
+          var ns = document.createElement('span');
+          ns.className = 'cs-menu__num';
+          ns.textContent = it.num;
+          a.appendChild(ns);
+        }
+        var ls = document.createElement('span');
+        ls.className = 'cs-menu__label';
+        ls.textContent = it.label;
+        a.appendChild(ls);
         li.appendChild(a);
         menuList.appendChild(li);
         it.mlink = a;
