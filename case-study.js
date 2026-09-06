@@ -201,19 +201,38 @@
       document.body.appendChild(backdrop);
       document.body.appendChild(menu);
 
+      var lockedScrollY = 0;
+      function lockScroll() {
+        lockedScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        document.body.style.position = 'fixed';
+        document.body.style.top = -lockedScrollY + 'px';
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.width = '100%';
+        document.body.style.overflow = 'hidden';
+      }
+      function unlockScroll() {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+        document.body.style.overflow = '';
+        window.scrollTo(0, lockedScrollY);
+      }
       function closeMenu() {
         menu.classList.remove('is-open');
         backdrop.classList.remove('is-open');
         toggle.classList.remove('is-active');
         toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+        unlockScroll();
       }
       function openMenu() {
         menu.classList.add('is-open');
         backdrop.classList.add('is-open');
         toggle.classList.add('is-active');
         toggle.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
+        lockScroll();
       }
       toggle.addEventListener('click', function () {
         if (menu.classList.contains('is-open')) closeMenu();
