@@ -87,8 +87,11 @@
       var list = document.createElement('ul');
       list.className = 'sidenav__list';
 
-      /* 從內文 .eyebrow 取章節編號（"—" 前的字，如 Ch1 / 01 / S2）以保持一致 */
+      /* 章節編號沿用內文 .eyebrow（"—" 前的字，如 Ch1 / 01 / S2）以保持一致；
+         個別頁面可用 <main data-nav-num="off"> 關閉編號 */
+      var showNum = main.getAttribute('data-nav-num') !== 'off';
       function sectionNum(section) {
+        if (!showNum) return '';
         var eb = section.querySelector('.eyebrow');
         if (!eb) return '';
         var t = (eb.textContent || '').trim();

@@ -15,7 +15,7 @@
   <!-- 回首頁（左側錨點導覽由 case-study.js 依章節標題動態產生） -->
   <a class="home-link" href="../#work" aria-label="回到案例研究">← 案例研究</a>
 
-  <main id="top">
+  <main id="top" data-nav-num="off">
 
     <!-- ====================== Hero / Metadata ====================== -->
     <section class="hero" id="hero">
@@ -47,7 +47,7 @@
         <h2 class="section-title">問題定義</h2>
 
         <div class="block">
-          <p class="block__id">2.1</p>
+          <p class="block__id">1.1</p>
           <h3>工作流程</h3>
           <ol>
             <li>一手經驗＋二手資料分析</li>
@@ -57,7 +57,7 @@
         </div>
 
         <div class="block">
-          <p class="block__id">2.2</p>
+          <p class="block__id">1.2</p>
           <h3>一二手資料分析</h3>
 
           <div class="card-grid">
@@ -167,7 +167,7 @@
         </div>
 
         <div class="block">
-          <p class="block__id">2.3</p>
+          <p class="block__id">1.3</p>
           <h3>競品分析</h3>
           <p><strong>分析項目</strong>：回訪使用者任務延續設計、資訊架構安排　<strong>參考競品</strong>：ChatGPT、Gemini、Grok</p>
 
@@ -202,7 +202,7 @@
         <h2 class="section-title">設計方案</h2>
 
         <div class="block">
-          <p class="block__id">3.1</p>
+          <p class="block__id">2.1</p>
           <h3>Redesign 項目</h3>
           <ol>
             <li>Chat Interface 加入延續工作卡片</li>
@@ -211,7 +211,7 @@
         </div>
 
         <div class="block">
-          <p class="block__id">3.2</p>
+          <p class="block__id">2.2</p>
           <h3>工作流程</h3>
           <ol>
             <li>透過 Flow Chart 梳理目前使用 Projects 功能的使用者操作步驟，以及規劃迭代後的使用者操作流程及邏輯細節</li>
@@ -222,7 +222,7 @@
         </div>
 
         <div class="block">
-          <p class="block__id">3.3</p>
+          <p class="block__id">2.3</p>
           <h3>延續工作卡片</h3>
 
           <div class="note-card">
@@ -277,7 +277,7 @@
         </div>
 
         <div class="block">
-          <p class="block__id">3.4</p>
+          <p class="block__id">2.4</p>
           <h3>資訊架構重構</h3>
 
           <div class="note-card">
@@ -324,7 +324,7 @@
         </div>
 
         <div class="block">
-          <p class="block__id">3.5</p>
+          <p class="block__id">2.5</p>
           <h3>基礎設計系統</h3>
 
           <p><strong>基礎 Design Token（摘要，完整數值見 Figma）</strong></p>
@@ -367,7 +367,7 @@
         </div>
 
         <div class="block">
-          <p class="block__id">3.6</p>
+          <p class="block__id">2.6</p>
           <h3>成功指標（工具假設為 GA4）</h3>
 
           <h4>表一：延續工作卡片</h4>
@@ -426,25 +426,25 @@
         <h2 class="section-title">AI 協作</h2>
 
         <div class="block">
-          <p class="block__id">4.1</p>
+          <p class="block__id">3.1</p>
           <h3>AI 參與部分</h3>
           <p>本次專案中，AI 主要協助兩類工作：二手資料分析與成功指標規劃。二手資料分析部分，透過跨模型交叉查詢，快速蒐集業界對 claude.ai「開始任務」體驗的既有討論，作為問題篩選的起點；成功指標部分，AI 協助將「如何知道方案上線後有變好」這個抽象問題，拆解成可實際落地的量測邏輯——例如將指標分成「埋事件即可算出」與「需另建 GA4 路徑分析報表計算」兩種可行性等級，並個別定義每個指標對應的事件命名與判斷邏輯。這些建議加快了從構想到可執行量測方案的速度，但最終是否採用，仍需回到我自己對設計目標與商業脈絡的判斷。</p>
         </div>
 
         <div class="block">
-          <p class="block__id">4.2</p>
+          <p class="block__id">3.2</p>
           <h3>AI 哪些建議你接受或沒有接受？為什麼？</h3>
           <p>我先依照題目範圍（是否影響「開始一個任務」）與嚴重程度（是否直接影響商業目標，即付費會員轉換率）對蒐集到的使用者痛點進行分類與篩選，最終收斂到四個痛點。接著實際到 claude.ai 逐一測試這四個痛點是否仍然存在，發現 AI 提供的資料有不即時的問題——四個痛點中，有兩個其實已經被 Claude 官方解決（首次使用者引導、prompt 生成）。這說明即便 AI 能大幅提高資料蒐集與分類的效率，設計者仍必須親自做事實查核，不能直接把 AI 的分析結果當作現況依據。</p>
         </div>
 
         <div class="block">
-          <p class="block__id">4.3</p>
+          <p class="block__id">3.3</p>
           <h3>AI 真正影響設計結果的過程</h3>
           <p>AI 並沒有改變我最初想解決的問題方向，但補足了我在產品設計時，因缺乏工程背景而容易忽略的技術盲區。例如延續工作卡片的判斷邏輯，我原本的設計是讓 Claude 理解對話上下文，主動判斷哪些對話屬於「真正未完成的工作」，藉此決定卡片內容。但與 Claude 討論後，AI 不建議這個做法——理由是每次使用者打開首頁，系統都必須把所有對話重新爬過一次並跑一次語意判斷，這代表每次都要多一次網路請求與推論時間，反而違背「讓使用者更容易開始一個任務」的設計目標；相對地，單純用最後活動時間排序，不需要額外推論，最能支持這個目標。我認同這個理由邏輯成立，但也認為這個判斷需要被驗證，而非直接當作定論——因此在成功指標裡加入卡片點擊率與點擊後對話存活率兩項，用來實際檢驗「單純用時間排序」是否真的能有效協助使用者延續任務。</p>
         </div>
 
         <div class="block">
-          <p class="block__id">4.4</p>
+          <p class="block__id">3.4</p>
           <h3>設計師的判斷</h3>
           <p>兩個 redesign 痛點的篩選、以及後續迭代設計方向的每一次收斂，最終都是由我自己判斷決定的。但在每一次判斷之前，我都會先跟 AI 完整闡述自己的思考脈絡與取捨理由，讓 AI 針對我的邏輯提出質疑或反例，確保決策過程中沒有太嚴重的思考盲區。AI 在這個過程中扮演的角色比較像是一個會反問、會挑戰假設的對話對象，而不是一個直接給答案的工具——最終每一個設計決策，仍然是我自己對題目、商業脈絡與使用者需求綜合判斷後拍板的。</p>
         </div>
@@ -509,6 +509,6 @@
     <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
   </div>
 
-  <script src="../case-study.js?v=10" defer></script>
+  <script src="../case-study.js?v=11" defer></script>
 </body>
 </html>
