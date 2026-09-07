@@ -874,7 +874,7 @@ figcaption {
 }
 
 .lightbox__caption .figure__note {
-  display: block;
+  display: none;
 }
 
 .lightbox__close {
