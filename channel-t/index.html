@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css?v=17" />
+  <link rel="stylesheet" href="../style.css?v=18" />
 </head>
 <body class="case-study">
 
@@ -286,7 +286,7 @@
 
         <div class="block">
           <p class="block__id">S6-02</p>
-          <h3>面向供需兩端的產品價值</h3>
+          <h3>目標客戶重新定位</h3>
           <p>從 B2B 雙邊市場的供需邏輯來看，需求方能否有效使用平台，建立在平台是否具備足夠且有價值的行程供給之上。因此，我重新從供給與需求兩側思考產品價值：</p>
           <ul>
             <li><strong>供給端：</strong>降低旅遊供應商上架、管理與分銷行程的成本，同時透過平台聚集的需求方會員，增加行程曝光與分銷機會。</li>
@@ -299,21 +299,19 @@
           <p class="block__id">S6-03</p>
           <h3>使用者與商業模型</h3>
           <p>為了將前期研究成果轉化為可執行的產品策略，我進一步運用以下三項工具，建立從使用者需求、商業轉換到產品目標的完整框架：</p>
-          <ul>
-            <li><strong>消費者肖像</strong> — 人物誌＋消費者觀點</li>
-            <li><strong>商業漏斗</strong> — 使用者旅程＋關鍵轉換點</li>
-            <li><strong>關鍵指標</strong> — 公司商業指標＋產品成功指標＋觸點階段指標</li>
-          </ul>
+          <p class="figure-label"><strong>消費者肖像</strong> — 人物誌＋消費者觀點</p>
           <figure>
             <img src="../assets/channel-t/s6-03-persona.svg" width="1024" height="454" alt="消費者肖像示意圖：人物誌與消費者觀點，呈現供給端與需求端使用者的樣貌與需求" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
             <div class="figure__placeholder" style="display:none; aspect-ratio: 1024 / 454;">消費者肖像 — assets/channel-t/s6-03-persona.svg</div>
             <figcaption>消費者肖像：人物誌＋消費者觀點。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
           </figure>
+          <p class="figure-label"><strong>商業漏斗</strong> — 使用者旅程＋關鍵轉換點</p>
           <figure>
             <img src="../assets/channel-t/s6-03-funnel.svg" width="1042" height="297" alt="商業漏斗示意圖：使用者旅程與關鍵轉換點，呈現使用者從進入到轉換的各階段" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
             <div class="figure__placeholder" style="display:none; aspect-ratio: 1042 / 297;">商業漏斗 — assets/channel-t/s6-03-funnel.svg</div>
             <figcaption>商業漏斗：使用者旅程＋關鍵轉換點。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
           </figure>
+          <p class="figure-label"><strong>關鍵指標</strong> — 公司商業指標＋產品成功指標＋觸點階段指標</p>
           <figure>
             <img src="../assets/channel-t/s6-03-metrics.svg" width="1024" height="412" alt="關鍵指標示意圖：公司商業指標、產品成功指標與觸點階段指標的對應關係" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
             <div class="figure__placeholder" style="display:none; aspect-ratio: 1024 / 412;">關鍵指標 — assets/channel-t/s6-03-metrics.svg</div>
@@ -344,7 +342,6 @@
         <div class="block">
           <p class="block__id">S7-01</p>
           <h3>資訊架構</h3>
-          <p>根據 MVP 功能與前期研究結果，我重新整理產品資訊架構，將供給端與需求端的核心任務拆分，建立清楚的功能層級與操作入口。透過使用者訪談，我也發現供給端主要使用桌機進行行程建立與管理，需求端則較常使用觸控裝置進行行程搜尋與瀏覽。因此，在資訊架構與後續介面設計上，也將不同角色的使用情境與裝置特性納入考量。</p>
 
           <figure>
             <img src="../assets/channel-t/s7-01-ia-structure.svg" width="1000" height="720" alt="Channel-T 產品資訊架構圖，呈現全域共用層 Header、第一層首頁的三種搜尋方式與第二層會員功能選單之間的層級關係" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
@@ -356,14 +353,18 @@
             <h4>全域共用層｜Header / Navigation</h4>
             <p>Header 作為登入後主要的全域入口，承載跨頁面使用頻率高，且與產品核心價值及商業目標直接相關的功能：</p>
             <ul>
-              <li>會員與帳號：作為系統身份與會員機制的基礎；登入後延伸為方案升級入口</li>
-              <li>AI 智能推薦：產品核心功能，提供另一種行程搜尋方式</li>
               <li>系統通知：讓使用者即時掌握行程分銷、曝光及系統相關資訊</li>
               <li>即時訊息：讓供給端即時掌握需求方的詢問與分銷溝通</li>
               <li>會員功能選單：承載第二層的會員功能</li>
               <li>導覽搜尋：提供全域的地理位置導覽，讓使用者依洲別、國家與城市快速尋找行程</li>
+              <li>AI 智能推薦：產品核心功能，提供另一種行程搜尋方式</li>
             </ul>
-            <p>Header 的資訊層級主要考量兩個面向：<strong>降低學習成本</strong>（將跨頁面、高頻使用的功能維持在一致的位置，符合使用者既有的產品心智模型）與<strong>兼顧產品與商業目標</strong>（例如將方案升級置於全域層級，使其成為明確的商業 CTA；同時將訊息與通知置於全域層，讓供給端能即時掌握分銷相關活動）。在需求端，則將 AI 智能推薦提升至全域層級，使其與導覽搜尋處於同等優先級，讓使用者可以隨時透過 AI 進行行程探索，同時保留導覽搜尋作為符合既有工作習慣的主要搜尋入口。AI 搜尋所產生的實際使用資料，也能作為後續產品與 AI 能力持續優化的基礎。</p>
+            <p><strong>主要考量</strong></p>
+            <ol>
+              <li>降低學習成本，將跨頁面、高頻使用的功能維持在一致的位置，符合使用者既有的產品心智模型</li>
+              <li>兼顧產品與商業目標，例如將方案升級置於全域層級，使其成為明確的商業 CTA；同時將訊息與通知置於全域層，讓供給端能即時掌握分銷相關活動</li>
+              <li>將 AI 智能推薦提升至全域層級，讓使用者可以隨時透過 AI 進行行程探索。AI 搜尋所產生的實際使用資料，將作為後續 AI 模型優化的基礎。</li>
+            </ol>
           </div>
 
           <div class="sub">
@@ -374,7 +375,7 @@
               <li><strong>AI 智能推薦</strong>：作為產品核心搜尋能力，讓使用者以較自然的方式描述需求，探索符合條件的行程</li>
               <li><strong>關鍵字搜尋</strong>：提供目的明確的快速查找方式，當使用者已知道特定的目的地、行程名稱或關鍵條件時，可以直接輸入關鍵字找到目標行程</li>
             </ul>
-            <p>因此，資訊架構並非單純依照功能重要性排序，而是同時考量使用者既有習慣與產品策略：導覽搜尋與 AI 智能推薦處於較高的資訊層級，而關鍵字搜尋則保留在首頁，確保使用者仍能快速使用熟悉的搜尋方式。</p>
+            <p>資訊架構並非單純依照功能重要性排序，而是同時考量使用者既有習慣與產品策略：導覽搜尋與 AI 智能推薦處於較高的資訊層級，而關鍵字搜尋則保留在首頁，確保使用者仍能快速使用熟悉的搜尋方式。</p>
           </div>
 
           <div class="sub">
@@ -392,13 +393,13 @@
         <div class="block">
           <p class="block__id">S7-02</p>
           <h3>使用者流程</h3>
-          <p>在確立資訊架構後，我進一步將前期使用者研究中發現的實務情境，轉化為具體的使用者流程。由於行程上架與後續管理涉及多種實務情境，我特別針對供給端的核心工作流程進行深入拆解，並與工程團隊同步討論資料結構、權限邏輯與實作可行性，確保流程不只符合使用者需求，也能真正落地。</p>
+          <p>在確立資訊架構後，我進一步將前期使用者研究中發現的實務情境，轉化為具體的使用者流程。</p>
 
           <div class="sub">
             <h4><span class="sub__num">01</span>母團與子團：如何降低行程上架成本？</h4>
-            <p>使用者訪談發現，同一個母團可能對應多個不同出發日期的子團，而供應商提供的原始行程檔案格式也相當多元，可能是完整的每日行程，也可能只提供部分資訊，例如不同日期的同業價格。</p>
-            <p>因此，在 AI 解析後的行程確認流程中，我面臨一個關鍵的 UX 決策：應該將不同出發日期拆分成獨立頁面，讓使用者逐一確認？還是將價格等資訊以「最低價格起」的方式呈現，讓使用者快速完成上架？</p>
-            <p>我針對兩種方案製作 Prototype，並透過易用性測試進行比較。測試結果顯示，使用者更重視快速完成上架、降低重複操作，對於價格資訊則可以接受以「最低價格起」呈現，後續再由供需雙方進行確認。因此，我最終採用較低操作成本的方案，並據此確立行程上架的主要 User Flow。</p>
+            <p><strong>困難：</strong><br>使用者訪談發現，同一個母團可能對應多個不同出發日期的子團，而供應商提供的原始行程檔案格式也相當多元，可能是完整的每日行程，也可能只提供部分資訊，例如不同日期的同業價格。</p>
+            <p><strong>UX 決策：</strong><br>應該將不同出發日期拆分成獨立頁面，讓使用者逐一確認？還是將價格等子行程差異資訊以「最低價格起」的兼容方式呈現，讓使用者快速完成上架？</p>
+            <p><strong>決策方式：</strong><br>我針對兩種方案製作 Prototype，並透過易用性測試進行比較。測試結果顯示，使用者更重視快速完成上架、降低重複操作，對於價格資訊則可以接受以「最低價格起」呈現，後續再由供需雙方進行確認。</p>
             <blockquote><p>設計原則：AI 不需要一次處理所有複雜情境，而是先協助使用者快速完成上架，再將需要人工確認的資訊留給後續流程處理。</p></blockquote>
           </div>
 
@@ -413,21 +414,13 @@
             <p>這些問題同時涉及使用者流程、會員機制與系統權限邏輯。經過使用者流程規劃與跨部門討論，我進一步將協作需求回饋至產品與商業策略，與管理層及行銷部門共同確立會員機制未來的分眾方向，作為後續方案與權限設計的基礎。</p>
           </div>
 
-          <div class="sub">
-            <h4><span class="sub__num">04</span>聯絡窗口：誰可以被選為行程聯絡人？</h4>
-            <p>使用者訪談發現，實際分銷過程中需要安排至少多位聯絡窗口，以避免單一窗口休假或無法即時回應時影響分銷。因此，流程設計需要進一步解決：誰有資格成為某個行程的聯絡窗口？</p>
-            <p>這個問題最後回到會員註冊時的身份資料。透過前期競品研究，我發現 B2B 旅遊平台通常會要求會員提供公司統一編號及對應的公司名片，以確認會員的產業身份。因此，我將這項資訊納入會員註冊流程，並以公司統一編號作為判斷會員是否屬於同一公司的基礎。在此基礎上：行程建立者可以從符合資格的會員中指定聯絡窗口；聯絡窗口資格與公司身份產生關聯；會員資料需要定期更新，以降低會員離職或轉換職業後仍保有原公司權限的風險。</p>
-            <p>這使得原本單純的「選擇聯絡人」功能，進一步與會員身份、權限與資料維護機制串聯。</p>
-          </div>
-
-          <p><strong>流程設計的核心</strong>：透過上述流程拆解，我將使用者研究中發現的實務問題，進一步轉化為資料處理、行程生命週期、協作權限與會員身份等產品規則，再與工程團隊確認實作方式，形成可落地的 User Flow。</p>
           <blockquote><p>使用者研究 → 問題定義 → Prototype 驗證 → Flow 設計 → 產品規則 → 工程落地</p></blockquote>
         </div>
 
         <div class="block">
           <p class="block__id">S7-03</p>
           <h3>Wireframe</h3>
-          <p>完成使用者流程後，我進一步將前期研究、產品決策與 User Flow 轉化為 Wireframe，先確認資訊架構、資訊層級與操作邏輯，再進入高擬真 UI 設計。這個階段我沒有逐一展示所有 MVP 功能，而是聚焦於三個最能代表產品核心價值的流程：行程上架、行程管理與行程資訊頁。三者分別對應供給端建立內容、平台整理與分發內容，以及需求端搜尋與判斷內容的核心任務。</p>
+          <p>完成使用者流程後，我進一步將前期研究、產品決策與 User Flow 轉化為 Wireframe。這個階段我沒有逐一展示所有 MVP 功能，而是聚焦於三個最能代表產品核心價值的流程：行程上架、行程管理與行程資訊頁。</p>
 
           <div class="sub">
             <h4><span class="sub__num">01</span>行程上架</h4>
@@ -439,8 +432,6 @@
               <li>人工修正</li><li class="flow__arrow" aria-hidden="true">→</li>
               <li>完成上架</li>
             </ul>
-            <p>在資訊核對頁中，我將原始行程檔案與 AI 解析結果放在同一操作情境中，讓使用者可以直接對照原始資料確認解析內容，並個別修改行程名稱、出發地、出發日期、價格等關鍵資訊。針對同一母團可能對應多個出發日期的情境，出發日期採多選設計；同業價格則以最低價格搭配「起」呈現，降低使用者逐一處理不同子團的操作負擔。</p>
-            <blockquote><p>讓 AI 負責加速資料整理，使用者保留最終確認與修正的權限。</p></blockquote>
             <figure>
               <img src="../assets/channel-t/s7-03-wireframe-upload.svg" width="1200" height="640" alt="行程上架流程的 Wireframe 線框圖：從原始檔案上傳、AI 解析到資訊核對與人工修正的資訊層級與操作邏輯" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
               <div class="figure__placeholder" style="display:none; aspect-ratio: 1200 / 640;">行程上架 Wireframe — assets/channel-t/s7-03-wireframe-upload.svg</div>
@@ -848,6 +839,6 @@
     <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
   </div>
 
-  <script src="../case-study.js?v=17" defer></script>
+  <script src="../case-study.js?v=18" defer></script>
 </body>
 </html>

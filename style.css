@@ -498,6 +498,14 @@ figure {
   flex-direction: column;
 }
 
+/* 圖片上方的說明標題：與緊接的圖靠近，形成「標題＋圖」一組 */
+.figure-label {
+  margin-bottom: 12px;
+}
+.figure-label + figure {
+  margin-top: 0;
+}
+
 .section--alt figure {
   background-color: var(--stone-800);
 }
