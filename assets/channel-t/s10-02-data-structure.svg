@@ -1,0 +1,142 @@
+<svg viewBox="0 0 1024 640" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK TC, Inter, sans-serif">
+  <defs>
+    <pattern id="hatch" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#EDEAE2"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#FFFFFF" stroke-width="5"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="1024" height="640" fill="#FFFFFF"/>
+
+  <text x="48" y="46" font-size="24" font-weight="700" fill="#1F1E1D">行程資料結構：從母團共用欄位，到子團獨立呈現</text>
+
+  <text x="48" y="86" font-size="15" font-weight="700" letter-spacing="1" fill="#8A7654">BEFORE</text>
+  <text x="48" y="106" font-size="12" fill="#8B877F">不同出發日期整合於母團共用欄位，價格以「起」呈現</text>
+
+  <text x="536" y="86" font-size="15" font-weight="700" letter-spacing="1" fill="#8A7654">AFTER</text>
+  <text x="536" y="106" font-size="12" fill="#8B877F">子團依附母團獨立存在，可依出發日期查看對應資料</text>
+
+  <rect x="48" y="130" width="452" height="480" rx="2" fill="#EDEAE2" stroke="#C9C2B4" stroke-width="1"/>
+<rect x="68" y="150" width="412" height="30" rx="2" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/>
+<rect x="82" y="160" width="46" height="10" rx="1" fill="#C9C2B4"/>
+<circle cx="462" cy="165" r="5" fill="#C9C2B4"/>
+<circle cx="434" cy="165" r="5" fill="#C9C2B4"/>
+<circle cx="406" cy="165" r="5" fill="#C9C2B4"/>
+<text x="68" y="198" font-size="11" fill="#8B877F">首頁 &#8250; ○○地區 &#8250; ○○行程</text>
+<rect x="68" y="210" width="100" height="100" rx="2" fill="url(#hatch)" stroke="#C9C2B4" stroke-width="1"/>
+<text x="184" y="230" font-size="15" font-weight="700" fill="#1F1E1D">○○饗宴17日</text>
+<text x="184" y="250" font-size="10" fill="#8B877F">○○、○○、○○等17大亮點</text>
+<rect x="184" y="264" width="46" height="20" rx="10" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/><text x="207.0" y="278" text-anchor="middle" font-size="10" fill="#4A453D">南歐</text>
+<rect x="238" y="264" width="74" height="20" rx="10" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/><text x="275.0" y="278" text-anchor="middle" font-size="10" fill="#4A453D">世界遺產</text>
+<text x="184" y="306" font-size="12" fill="#4A453D"><tspan fill="#8A7654">&#9733;</tspan> 4.9(31)</text>
+<rect x="306" y="322" width="76" height="26" rx="2" fill="none" stroke="#8A7654" stroke-width="1"/>
+<text x="344.0" y="339" text-anchor="middle" font-size="11" fill="#8A7654">加入官網</text>
+<rect x="392" y="322" width="88" height="26" rx="2" fill="#8A7654"/>
+<text x="436.0" y="339" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">聯繫業務</text>
+<line x1="68" y1="368" x2="480" y2="368" stroke="#C9C2B4" stroke-width="1"/>
+<circle cx="72" cy="387" r="3" fill="#8A7654"/>
+<text x="84" y="392" font-size="13" font-weight="700" fill="#1F1E1D">行程資訊</text>
+<rect x="68" y="404" width="412" height="160" rx="2" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/>
+<text x="88" y="432" font-size="10.5" fill="#8B877F">優惠方案</text>
+<text x="176" y="432" font-size="11.5" fill="#1F1E1D" font-weight="600">限量升等方案</text>
+<text x="88" y="458" font-size="10.5" fill="#8B877F">出發地</text>
+<text x="176" y="458" font-size="11.5" fill="#1F1E1D" font-weight="600">台北桃園機場</text>
+<text x="88" y="484" font-size="10.5" fill="#8B877F">出發日期</text>
+<text x="176" y="484" font-size="11.5" fill="#1F1E1D" font-weight="600">11/12、12/12</text>
+<text x="88" y="510" font-size="10.5" fill="#8B877F">建議直售價</text>
+<text x="176" y="510" font-size="11.5" fill="#1F1E1D" font-weight="600">NT$XX,XXX 起</text>
+<text x="88" y="536" font-size="10.5" fill="#8B877F">同業售價</text>
+<text x="176" y="536" font-size="11.5" fill="#1F1E1D" font-weight="600">NT$XX,XXX 起</text>
+<text x="312" y="432" font-size="10.5" fill="#8B877F">所屬旅行社</text>
+<path d="M 387 427 v-2.4 a3 3 0 0 1 6 0 v2.4" fill="none" stroke="#8B877F" stroke-width="1.3"/><rect x="384" y="427" width="9" height="7" rx="1" fill="#8B877F"/>
+<text x="398" y="432" font-size="11" fill="#8B877F">登入查看</text>
+<text x="312" y="458" font-size="10.5" fill="#8B877F">聯繫窗口</text>
+<path d="M 387 453 v-2.4 a3 3 0 0 1 6 0 v2.4" fill="none" stroke="#8B877F" stroke-width="1.3"/><rect x="384" y="453" width="9" height="7" rx="1" fill="#8B877F"/>
+<text x="398" y="458" font-size="11" fill="#8B877F">登入查看</text>
+<text x="312" y="484" font-size="10.5" fill="#8B877F">聯絡電話</text>
+<path d="M 387 479 v-2.4 a3 3 0 0 1 6 0 v2.4" fill="none" stroke="#8B877F" stroke-width="1.3"/><rect x="384" y="479" width="9" height="7" rx="1" fill="#8B877F"/>
+<text x="398" y="484" font-size="11" fill="#8B877F">登入查看</text>
+<text x="68" y="596" font-size="12" fill="#4A453D">所有出發日期共用同一組價格與聯絡資訊</text>
+  <rect x="536" y="130" width="452" height="480" rx="2" fill="#EDEAE2" stroke="#C9C2B4" stroke-width="1"/>
+<rect x="556" y="150" width="412" height="30" rx="2" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/>
+<rect x="570" y="160" width="46" height="10" rx="1" fill="#C9C2B4"/>
+<circle cx="950" cy="165" r="5" fill="#C9C2B4"/>
+<circle cx="922" cy="165" r="5" fill="#C9C2B4"/>
+<circle cx="894" cy="165" r="5" fill="#C9C2B4"/>
+<text x="556" y="198" font-size="11" fill="#8B877F">首頁 &#8250; ○○地區 &#8250; ○○行程</text>
+<rect x="556" y="210" width="100" height="100" rx="2" fill="url(#hatch)" stroke="#C9C2B4" stroke-width="1"/>
+<rect x="554" y="220" width="60" height="16" fill="#FFFFFF" stroke="#6B5A3E" stroke-width="1"/>
+<text x="584" y="232" text-anchor="middle" font-size="9" font-weight="700" fill="#8A7654">保證出團</text>
+<text x="672" y="230" font-size="15" font-weight="700" fill="#1F1E1D">○○饗宴17日</text>
+<text x="672" y="250" font-size="10" fill="#8B877F">○○、○○、○○等17大亮點</text>
+<rect x="672" y="264" width="46" height="20" rx="10" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/><text x="695.0" y="278" text-anchor="middle" font-size="10" fill="#4A453D">南歐</text>
+<rect x="726" y="264" width="74" height="20" rx="10" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/><text x="763.0" y="278" text-anchor="middle" font-size="10" fill="#4A453D">世界遺產</text>
+<text x="672" y="306" font-size="12" fill="#4A453D"><tspan fill="#8A7654">&#9733;</tspan> 4.9(31)</text>
+<rect x="794" y="322" width="76" height="26" rx="2" fill="none" stroke="#8A7654" stroke-width="1"/>
+<text x="832.0" y="339" text-anchor="middle" font-size="11" fill="#8A7654">加入官網</text>
+<rect x="880" y="322" width="88" height="26" rx="2" fill="#8A7654"/>
+<text x="924.0" y="339" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">聯繫業務</text>
+<line x1="556" y1="368" x2="968" y2="368" stroke="#C9C2B4" stroke-width="1"/>
+<circle cx="560" cy="387" r="3" fill="#8A7654"/>
+<text x="572" y="392" font-size="13" font-weight="700" fill="#1F1E1D">行程資訊｜依出發日期切換</text>
+<rect x="556" y="404" width="180" height="160" rx="2" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/>
+<text x="608.0" y="426" text-anchor="middle" font-size="10" fill="#8B877F">&#9664;</text>
+<text x="646.0" y="426" text-anchor="middle" font-size="12" font-weight="700" fill="#8A7654">3月</text>
+<text x="684.0" y="426" text-anchor="middle" font-size="10" fill="#8B877F">&#9654;</text>
+<text x="568.8571428571429" y="444" text-anchor="middle" font-size="9" fill="#8B877F">日</text>
+<text x="594.5714285714286" y="444" text-anchor="middle" font-size="9" fill="#8B877F">一</text>
+<text x="620.2857142857143" y="444" text-anchor="middle" font-size="9" fill="#8B877F">二</text>
+<text x="646.0" y="444" text-anchor="middle" font-size="9" fill="#8B877F">三</text>
+<text x="671.7142857142858" y="444" text-anchor="middle" font-size="9" fill="#8B877F">四</text>
+<text x="697.4285714285714" y="444" text-anchor="middle" font-size="9" fill="#8B877F">五</text>
+<text x="723.1428571428571" y="444" text-anchor="middle" font-size="9" fill="#8B877F">六</text>
+<text x="568.8571428571429" y="461" text-anchor="middle" font-size="9.5" fill="#8B877F">1</text>
+<circle cx="594.5714285714286" cy="457.5" r="8.5" fill="none" stroke="#6B5A3E" stroke-width="1"/>
+<text x="594.5714285714286" y="461" text-anchor="middle" font-size="9.5" fill="#1F1E1D">2</text>
+<text x="620.2857142857143" y="461" text-anchor="middle" font-size="9.5" fill="#8B877F">3</text>
+<text x="646.0" y="461" text-anchor="middle" font-size="9.5" fill="#8B877F">4</text>
+<text x="671.7142857142858" y="461" text-anchor="middle" font-size="9.5" fill="#8B877F">5</text>
+<text x="697.4285714285714" y="461" text-anchor="middle" font-size="9.5" fill="#8B877F">6</text>
+<text x="723.1428571428571" y="461" text-anchor="middle" font-size="9.5" fill="#8B877F">7</text>
+<text x="568.8571428571429" y="481" text-anchor="middle" font-size="9.5" fill="#8B877F">8</text>
+<text x="594.5714285714286" y="481" text-anchor="middle" font-size="9.5" fill="#8B877F">9</text>
+<text x="620.2857142857143" y="481" text-anchor="middle" font-size="9.5" fill="#8B877F">10</text>
+<text x="646.0" y="481" text-anchor="middle" font-size="9.5" fill="#8B877F">11</text>
+<circle cx="671.7142857142858" cy="477.5" r="8.5" fill="#8A7654"/>
+<text x="671.7142857142858" y="481" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF">12</text>
+<text x="697.4285714285714" y="481" text-anchor="middle" font-size="9.5" fill="#8B877F">13</text>
+<text x="723.1428571428571" y="481" text-anchor="middle" font-size="9.5" fill="#8B877F">14</text>
+<text x="568.8571428571429" y="501" text-anchor="middle" font-size="9.5" fill="#8B877F">15</text>
+<text x="594.5714285714286" y="501" text-anchor="middle" font-size="9.5" fill="#8B877F">16</text>
+<text x="620.2857142857143" y="501" text-anchor="middle" font-size="9.5" fill="#8B877F">17</text>
+<text x="646.0" y="501" text-anchor="middle" font-size="9.5" fill="#8B877F">18</text>
+<circle cx="671.7142857142858" cy="497.5" r="8.5" fill="none" stroke="#6B5A3E" stroke-width="1"/>
+<text x="671.7142857142858" y="501" text-anchor="middle" font-size="9.5" fill="#1F1E1D">19</text>
+<text x="697.4285714285714" y="501" text-anchor="middle" font-size="9.5" fill="#8B877F">20</text>
+<text x="723.1428571428571" y="501" text-anchor="middle" font-size="9.5" fill="#8B877F">21</text>
+<text x="568.8571428571429" y="521" text-anchor="middle" font-size="9.5" fill="#8B877F">22</text>
+<text x="594.5714285714286" y="521" text-anchor="middle" font-size="9.5" fill="#8B877F">23</text>
+<text x="620.2857142857143" y="521" text-anchor="middle" font-size="9.5" fill="#8B877F">24</text>
+<text x="646.0" y="521" text-anchor="middle" font-size="9.5" fill="#8B877F">25</text>
+<circle cx="671.7142857142858" cy="517.5" r="8.5" fill="none" stroke="#6B5A3E" stroke-width="1"/>
+<text x="671.7142857142858" y="521" text-anchor="middle" font-size="9.5" fill="#1F1E1D">26</text>
+<text x="697.4285714285714" y="521" text-anchor="middle" font-size="9.5" fill="#8B877F">27</text>
+<text x="723.1428571428571" y="521" text-anchor="middle" font-size="9.5" fill="#8B877F">28</text>
+<text x="568.8571428571429" y="541" text-anchor="middle" font-size="9.5" fill="#8B877F">29</text>
+<text x="594.5714285714286" y="541" text-anchor="middle" font-size="9.5" fill="#8B877F">30</text>
+<text x="620.2857142857143" y="541" text-anchor="middle" font-size="9.5" fill="#8B877F">31</text>
+<rect x="748" y="404" width="220" height="160" rx="2" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/>
+<text x="764" y="430" font-size="10.5" fill="#8B877F">出發日期</text>
+<text x="764" y="446" font-size="12.5" font-weight="700" fill="#1F1E1D">2026/03/12</text>
+<text x="764" y="458" font-size="10.5" fill="#8B877F">已收人數</text>
+<text x="764" y="474" font-size="12.5" font-weight="700" fill="#1F1E1D">5 人</text>
+<text x="764" y="486" font-size="10.5" fill="#8B877F">最低成團人數</text>
+<text x="764" y="502" font-size="12.5" font-weight="700" fill="#1F1E1D">15 人</text>
+<text x="764" y="514" font-size="10.5" fill="#8B877F">同業價格</text>
+<text x="764" y="530" font-size="12.5" font-weight="700" fill="#1F1E1D">NT$XX,XXX</text>
+<text x="764" y="542" font-size="10.5" fill="#8B877F">建議直售價</text>
+<text x="764" y="558" font-size="12.5" font-weight="700" fill="#1F1E1D">NT$XX,XXX</text>
+<text x="556" y="596" font-size="12" fill="#4A453D">切換出發日期，即可查看該子團獨立的價格與名額資訊</text>
+
+  <text x="48" y="626" font-size="12" fill="#8B877F">示意重製圖，非原始產品畫面</text>
+</svg>

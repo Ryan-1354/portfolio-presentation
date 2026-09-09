@@ -1,0 +1,96 @@
+<svg viewBox="0 0 1024 640" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK TC, Inter, sans-serif">
+  <defs>
+    <pattern id="hatch2" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="9" height="9" fill="#EDEAE2"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#FFFFFF" stroke-width="4.5"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="1024" height="640" fill="#FFFFFF"/>
+
+  <text x="48" y="46" font-size="24" font-weight="700" fill="#1F1E1D">行程上傳：從 Modal 等待，到背景 Snackbar 不中斷工作流程</text>
+
+  <text x="48" y="86" font-size="15" font-weight="700" letter-spacing="1" fill="#8A7654">BEFORE</text>
+  <text x="48" y="106" font-size="12" fill="#8B877F">Modal 上傳，畫面鎖住等待解析完成</text>
+
+  <text x="536" y="86" font-size="15" font-weight="700" letter-spacing="1" fill="#8A7654">AFTER</text>
+  <text x="536" y="106" font-size="12" fill="#8B877F">上傳完檔案後 Modal 縮至 Snackbar，不鎖定畫面</text>
+  <text x="536" y="122" font-size="12" fill="#8B877F">使用者仍可繼續上傳其他行程</text>
+
+  <rect x="48" y="140" width="452" height="470" rx="2" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/>
+<rect x="76" y="168" width="140" height="24" rx="2" fill="#EDEAE2" opacity="0.55"/>
+<circle cx="460" cy="180" r="16" fill="#EDEAE2" opacity="0.55"/>
+<rect x="72" y="210" width="404" height="370" rx="3" fill="#EDEAE2" stroke="#8A7654" stroke-width="1.5"/>
+<circle cx="446" cy="236" r="14" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="446" y="241" text-anchor="middle" font-size="13" fill="#4A453D">&#215;</text>
+<text x="96" y="260" font-size="18" font-weight="700" fill="#1F1E1D">上傳行程檔案</text>
+<text x="96" y="284" font-size="12" fill="#8B877F">AI 將辨識上傳內容，並於下一步提供資訊供您核對</text>
+<rect x="96" y="302" width="356" height="66" rx="2" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="114" y="340" font-size="13" fill="#4A453D">點擊上傳</text>
+<text x="430" y="342" font-size="18" fill="#8B877F">+</text>
+<circle cx="100" cy="388" r="2" fill="#8A7654"/>
+<text x="110" y="392" font-size="11.5" fill="#8B877F">僅限上傳 1 份主要行程檔案，最大 20MB</text>
+<circle cx="100" cy="410" r="2" fill="#8A7654"/>
+<text x="110" y="414" font-size="11.5" fill="#8B877F">支援格式：PDF、JPG、PNG</text>
+<circle cx="100" cy="432" r="2" fill="#8A7654"/>
+<text x="110" y="436" font-size="11.5" fill="#8B877F">下一步可上傳附加資料及編輯主圖</text>
+<rect x="360" y="522" width="92" height="34" rx="2" fill="#8A7654"/>
+<text x="406.0" y="544" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">下一步</text>
+  <rect x="536" y="140" width="452" height="470" rx="2" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/>
+<rect x="560" y="160" width="404" height="30" rx="2" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/>
+<text x="574" y="180" font-size="14" fill="#8B877F">+</text>
+<circle cx="598" cy="173" r="4.5" fill="none" stroke="#8B877F" stroke-width="1.3"/>
+<line x1="601.5" y1="176.5" x2="605" y2="180" stroke="#8B877F" stroke-width="1.3" stroke-linecap="round"/>
+<rect x="874" y="167" width="66" height="16" rx="8" fill="#EDEAE2" stroke="#C9C2B4" stroke-width="1"/>
+<text x="907" y="179" text-anchor="middle" font-size="9" fill="#4A453D">升級方案</text>
+<circle cx="856" cy="175" r="6" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<circle cx="834" cy="175" r="6" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<circle cx="950" cy="175" r="8" fill="#C9C2B4"/>
+<text x="762.0" y="226" text-anchor="middle" font-size="16" font-weight="700" fill="#1F1E1D">讓旅遊行程分銷，更快、更簡單</text>
+<rect x="560" y="242" width="404" height="32" rx="16" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/>
+<text x="576" y="263" font-size="11" fill="#8B877F">輸入你的行程需求</text>
+<rect x="872" y="246" width="88" height="24" rx="12" fill="#8A7654"/>
+<text x="916.0" y="262" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">AI 智能推薦</text>
+<text x="560" y="298" font-size="12" font-weight="700" fill="#4A453D">熱門行程</text>
+<rect x="560.0" y="312" width="126.66666666666667" height="58" rx="2" fill="url(#hatch2)" stroke="#C9C2B4" stroke-width="1"/>
+<rect x="560.0" y="376" width="76.0" height="4" rx="2" fill="#C9C2B4"/>
+<text x="560.0" y="398" font-size="10.5" font-weight="700" fill="#1F1E1D">NT$&#8212;&#8212;<tspan fill="#8A7654" font-size="9" dx="2">起</tspan></text>
+<text x="686.6666666666666" y="398" text-anchor="end" font-size="8.5" fill="#8B877F">同業價</text>
+<rect x="698.6666666666667" y="312" width="126.66666666666667" height="58" rx="2" fill="url(#hatch2)" stroke="#C9C2B4" stroke-width="1"/>
+<rect x="698.6666666666667" y="376" width="76.0" height="4" rx="2" fill="#C9C2B4"/>
+<text x="698.6666666666667" y="398" font-size="10.5" font-weight="700" fill="#1F1E1D">NT$&#8212;&#8212;<tspan fill="#8A7654" font-size="9" dx="2">起</tspan></text>
+<text x="825.3333333333334" y="398" text-anchor="end" font-size="8.5" fill="#8B877F">同業價</text>
+<rect x="837.3333333333334" y="312" width="126.66666666666667" height="58" rx="2" fill="url(#hatch2)" stroke="#C9C2B4" stroke-width="1"/>
+<rect x="837.3333333333334" y="376" width="76.0" height="4" rx="2" fill="#C9C2B4"/>
+<text x="837.3333333333334" y="398" font-size="10.5" font-weight="700" fill="#1F1E1D">NT$&#8212;&#8212;<tspan fill="#8A7654" font-size="9" dx="2">起</tspan></text>
+<text x="964.0" y="398" text-anchor="end" font-size="8.5" fill="#8B877F">同業價</text>
+<rect x="761.76" y="452" width="226.24" height="26" rx="2" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/>
+<text x="773.76" y="469" font-size="11" font-weight="700" fill="#1F1E1D">上傳行程</text>
+<path d="M 952.0 464 l 4 4 l 4 -4" fill="none" stroke="#8B877F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="974.0" y="469" font-size="11" fill="#8B877F">&#215;</text>
+<rect x="761.76" y="478" width="226.24" height="132" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="1"/>
+<rect x="773.76" y="487" width="9" height="9" rx="1" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="789.76" y="496" font-size="9.5" fill="#4A453D">檔案名稱.pdf</text>
+<circle cx="972.0" cy="493" r="6" fill="#6B9C7C"/>
+<text x="972.0" y="496" text-anchor="middle" font-size="8" fill="#FFFFFF">&#10003;</text>
+<rect x="773.76" y="509" width="9" height="9" rx="1" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="789.76" y="518" font-size="9.5" fill="#4A453D">檔案名稱.pdf</text>
+<circle cx="972.0" cy="515" r="6" fill="#6B9C7C"/>
+<text x="972.0" y="518" text-anchor="middle" font-size="8" fill="#FFFFFF">&#10003;</text>
+<rect x="773.76" y="531" width="9" height="9" rx="1" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="789.76" y="540" font-size="9.5" fill="#4A453D">檔案名稱.pdf</text>
+<circle cx="972.0" cy="537" r="6" fill="#6B9C7C"/>
+<text x="972.0" y="540" text-anchor="middle" font-size="8" fill="#FFFFFF">&#10003;</text>
+<rect x="773.76" y="553" width="9" height="9" rx="1" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="789.76" y="562" font-size="9.5" fill="#4A453D">檔案名稱.pdf</text>
+<text x="974.0" y="562" text-anchor="end" font-size="8.5" fill="#8A7654">解析中&#183;62%</text>
+<rect x="789.76" y="566" width="182.24" height="3" rx="1.5" fill="#C9C2B4"/>
+<rect x="789.76" y="566" width="112.98880000000001" height="3" rx="1.5" fill="#8A7654"/>
+<rect x="773.76" y="575" width="9" height="9" rx="1" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="789.76" y="584" font-size="9.5" fill="#4A453D">檔案名稱.pdf</text>
+<circle cx="972.0" cy="581" r="6" fill="#6B9C7C"/>
+<text x="972.0" y="584" text-anchor="middle" font-size="8" fill="#FFFFFF">&#10003;</text>
+<text x="773.76" y="602" font-size="8" fill="#8B877F">可繼續瀏覽頁面，解析完成後將自動更新</text>
+
+  <text x="48" y="628" font-size="12" fill="#8B877F">示意重製圖，非原始產品畫面</text>
+</svg>
