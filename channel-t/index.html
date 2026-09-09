@@ -577,7 +577,7 @@
       <div class="container">
         <p class="eyebrow">S9 — Design System</p>
         <h2 class="section-title">設計系統</h2>
-        <p class="section-intro">完成核心頁面的 UI 設計後，我進一步將產品中反覆出現的視覺規則、元件、使用規範與特殊狀態系統化，建立一套可持續使用的 Design System。這套系統並不只是為了讓畫面視覺一致，而是希望建立一套從基礎視覺、元件、使用規則到實際互動情境的共同語言，支援後續產品開發與迭代。</p>
+        <p class="section-intro">完成核心頁面的 UI 設計後，我進一步將產品中反覆出現的視覺規則、元件、使用規範與特殊狀態系統化，建立一套可持續使用的 Design System。</p>
 
         <ul class="flow">
           <li>Core Style</li><li class="flow__arrow" aria-hidden="true">→</li>
@@ -593,13 +593,15 @@
           <h3>Core Style</h3>
           <p>首先建立產品最基礎的視覺語言，主要包含：</p>
           <ul>
-            <li><strong>Color</strong>：定義產品的色彩階層與使用規則，區分不同用途與資訊層級</li>
+            <li><strong>Color</strong>：定義產品的色彩階層與使用規則，按照 Design Token 的層級做區分</li>
             <li><strong>Typography</strong>：建立文字尺寸、字重與階層，讓 Heading、Body、Caption 等不同資訊具有一致的視覺層級</li>
+            <li><strong>Spacing</strong>：將 Design Token 中的距離系統做視覺化呈現</li>
+            <li><strong>Radius</strong>：將 Design Token 中的圓角做視覺化呈現</li>
           </ul>
           <p>Core Style 作為後續 Token 與 Component 的視覺基礎，避免不同頁面或功能各自產生不同的視覺規則。</p>
           <figure>
-            <img src="../assets/channel-t/s9-01-core-styles.jpg" width="2956" height="1104" alt="Core Style — 顏色與文字：色彩階層、使用規則，以及字型、尺寸、行高與文字色彩的視覺規範" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="figure__placeholder" style="display:none; aspect-ratio: 2956 / 1104;">Core Style — assets/channel-t/s9-01-core-styles.jpg</div>
+            <img src="../assets/channel-t/s9-01-core-styles.png" width="2956" height="1104" alt="Core Style — 顏色與文字：色彩階層、使用規則，以及字型、尺寸、行高與文字色彩的視覺規範" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="figure__placeholder" style="display:none; aspect-ratio: 2956 / 1104;">Core Style — assets/channel-t/s9-01-core-styles.png</div>
             <figcaption>Core Style — 顏色與文字：色彩階層、使用規則與文字系統規範。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
           </figure>
         </div>
@@ -607,7 +609,7 @@
         <div class="block">
           <p class="block__id">S9-02</p>
           <h3>Design Token</h3>
-          <p>在 Core Style 的基礎上，我進一步將設計規則轉換為可被系統化管理的 Design Token。Token 採用兩層架構：</p>
+          <p>我進一步將設計規則轉換為可被系統化管理的 Design Token。Token 採用兩層架構：</p>
           <ul>
             <li><strong>Reference Token</strong>：定義最基礎的顏色、尺寸、間距等原始數值</li>
             <li><strong>System Token</strong>：將 Reference Token 對應到產品實際使用的語意與情境，讓元件引用的是「用途」，而不是直接依賴某個數值</li>
@@ -623,11 +625,10 @@
         <div class="block">
           <p class="block__id">S9-03</p>
           <h3>Component Library</h3>
-          <p>完成基礎視覺與 Token 後，我將產品中反覆使用的 UI 元件建立成 Component Library。例如：Button、Input、Select、Dropdown、Date Picker、Chip、Modal、Toast、Table、Pagination、Breadcrumb。除了建立元件本身，也針對不同使用情境建立 Variants 與 States，讓同一個元件可以直接套用於不同頁面，而不需要重複繪製。</p>
+          <p>我將產品中反覆使用的 UI 元件建立成 Component Library。除了建立元件本身，也針對不同使用情境建立 Variants 與 States。</p>
           <div class="sub">
             <h4>與前端共同定義元件</h4>
             <p>在建立 Component Library 的過程中，我也與前端工程師共同討論元件的實作方式，並以 shadcn/ui 作為主要的元件與 Icon 使用基礎。選擇這個方向的主要原因，是設計與前端都能直接以 shadcn/ui 的元件 Prototype 作為共同參考。除了視覺樣式之外，也能直接確認元件在不同狀態下的互動方式，例如開啟、選取、Hover、Disabled 等。因此，設計端不需要單獨描述每個元件「應該如何互動」，前端也能直接參考既有的互動邏輯進行實作，降低雙方在元件行為上的溝通成本。</p>
-            <p>我在設計 Component Library 時，也同步考量：元件是否能被前端重複使用、Variants 是否能對應實際開發需求、不同 State 是否能被明確定義、Icon 使用方式是否能維持一致，讓 Figma 中的 Component Library 與實際開發環境具有明確的對應關係。</p>
           </div>
           <figure>
             <img src="../assets/channel-t/s9-03-component-library.png" width="3000" height="1800" alt="Component Library 元件庫：Button、Input、Select、Dropdown、Date Picker、Chip、Modal、Toast、Table、Pagination、Breadcrumb 等元件的 Variants 與 States" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
@@ -650,7 +651,7 @@
         <div class="block">
           <p class="block__id">S9-05</p>
           <h3>Design Pattern</h3>
-          <p>Component 解決的是「元件本身怎麼運作」，Design Pattern 則進一步處理特定產品情境下，元件應該如何組合與回饋。例如表單的必填欄位：當使用者沒有填寫必要資訊便直接送出時，不只是將 Input 標示為 Error，而是同時定義錯誤文字、文字層級、顏色、欄位狀態，以及使用者下一步應如何修正。因此，同一個 Input Component 在不同產品情境下，可以透過 Pattern 建立一致的使用方式，讓 Design System 不只是視覺元件集合，而開始涵蓋使用者操作與回饋邏輯。</p>
+          <p>Design Pattern 進一步處理特定產品情境下，元件應該如何組合與回饋。例如表單的必填欄位：當使用者沒有填寫必要資訊便直接送出時，不只是將 Input 標示為 Error，而是同時定義錯誤文字、文字層級、顏色、欄位狀態，以及使用者下一步應如何修正。因此，同一個 Input Component 在不同產品情境下，可以透過 Pattern 建立一致的使用方式，讓 Design System 不只是視覺元件集合，而開始涵蓋使用者操作與回饋邏輯。</p>
           <figure>
             <img src="../assets/channel-t/s9-05-design-pattern.png" width="1900" height="1400" alt="Design Pattern 設計模式：以表單必填欄位為例，定義 Error 狀態下的錯誤文字、文字層級、顏色、欄位狀態與修正引導" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
             <div class="figure__placeholder" style="display:none; aspect-ratio: 1900 / 1400;">Design Pattern — assets/channel-t/s9-05-design-pattern.png</div>
@@ -689,8 +690,21 @@
         <div class="block">
           <p class="block__id">S10-01</p>
           <h3>行程上架：從「等待解析」轉向「不中斷工作流程」</h3>
-          <p>MVP 上線後，我們發現 AI 解析的實際處理時間會依照使用者上傳的行程資料而有所落差（資料量與內容複雜度都會影響處理時間）。在測試過程中，多數使用者認為等待時間過長；同時，原本的上傳流程一次只能處理一個檔案，使用者必須等待前一份檔案解析完成後，才能繼續上傳下一份。因此，如果使用者一次需要上傳多份行程，就必須反覆經歷「上傳 → 等待解析 → 完成 → 再次上傳」。即使我們嘗試從技術面降低 AI 解析時間，實際上解析時間仍會受到資料內容影響，難以完全控制。</p>
+          <div class="sub">
+            <h4>問題</h4>
+          </div>
+          <ul>
+            <li>MVP 上線後，我們發現 AI 解析的實際處理時間會依照使用者上傳的行程資料而有所落差（資料量與內容複雜度都會影響處理時間）。在測試過程中，多數使用者認為等待時間過長</li>
+            <li>原本的上傳流程一次只能處理一個檔案，使用者必須等待前一份檔案解析完成後，才能繼續上傳下一份。因此，如果使用者一次需要上傳多份行程，就必須反覆經歷「上傳 → 等待解析 → 完成 → 再次上傳」。</li>
+            <li>我們嘗試從技術面降低 AI 解析時間，實際上解析時間仍會受到資料內容影響，難以完全控制。</li>
+          </ul>
+          <div class="sub">
+            <h4>設計思考</h4>
+          </div>
           <p>因此，我重新思考這個問題：當技術無法立即消除等待時間時，是否可以透過設計降低「等待」對工作流程造成的影響？最終，我將設計目標從「縮短 AI 解析時間」轉向<strong>避免 AI 解析阻斷使用者工作</strong>。</p>
+          <div class="sub">
+            <h4>迭代設計</h4>
+          </div>
           <div class="sub">
             <h4>Modal → Fixed Snackbar</h4>
             <p>原本 AI 解析使用 Modal 呈現，使用者必須停留在 Modal 中等待解析完成，整個頁面會被暫時鎖定。我將其改為右下角 Fixed Snackbar，並讓解析狀態在不同頁面中持續存在，使用者不需停留在原本的上傳流程，可以離開目前頁面繼續處理其他工作。</p>
@@ -713,10 +727,22 @@
         <div class="block">
           <p class="block__id">S10-02</p>
           <h3>資料結構：從單一行程資訊轉向支援實際資料交換</h3>
-          <p>上線初期，主要供應商多以系統介接方式提供行程資料，因此我與後端工程師重新檢視資料欄位與資料結構，並回頭檢視原本的行程資料模型與前端呈現方式。這次重新檢視後，最大的改變是重新定義了母團與子團的資料關係。</p>
+          <div class="sub">
+            <h4>問題</h4>
+          </div>
+          <p>上線初期，主要供應商多透過系統介接提供行程資料，但各供應商提供的資料欄位不一，且與前端頁面原先定義的呈現欄位無法完全對應，導致部分供應商資料無法被完整承接與呈現，造成行程資訊頁的內容不完整。</p>
+          <div class="sub">
+            <h4>具體情況</h4>
+          </div>
           <p>原先的設計，是將不同出發日期視為同一行程下的資訊，並將不同子團的資料內容整合至母團的共用欄位中——例如價格會從不同子團中抓取最低值，以「起」作為價格呈現，讓供給方與需求方透過站內聊天進一步確認細節。這樣的設計在初期可以簡化資訊呈現與資料結構，但也意味著不同子團原本各自具備的資訊被壓縮成母團層級的摘要資訊，使用者無法直接查看特定出發日期所對應的完整內容。</p>
-          <p>因此，我與後端工程師重新定義母團與子團的資料關係：每一個子團依附於母團之下獨立存在，使用者可以直接依照不同出發日期查看對應的子團資訊。這使得需求方不需要再透過「最低價＋起」推測不同日期的實際內容，供需雙方在進一步聯繫時，也可以直接針對特定日期與特定行程進行溝通，降低資訊確認成本。</p>
-          <p>這次資料欄位的重新檢視，也讓我們回頭比對不同資料來源所需要的資訊，重新整理共用的資料結構，使不同的行程上架方式都能建立在相同的產品資料模型上——AI 上架與系統介接只是資料進入平台的方式不同，但進入產品後應該使用一致的資料結構與使用體驗。這次迭代讓我重新認識到：UX 設計不只是處理畫面本身，當產品開始接觸真實資料後，資料結構本身也會直接影響使用者看到什麼、如何理解資訊，以及如何完成工作。</p>
+          <div class="sub">
+            <h4>問題解決</h4>
+          </div>
+          <p>因此我與後端工程師重新檢視所有供應商資料欄位與資料結構，並回頭檢視原本的行程資料模型與前端呈現方式。這次重新檢視後，最大的改變是重新定義了母團與子團的資料關係。</p>
+          <div class="sub">
+            <h4>迭代設計</h4>
+          </div>
+          <p>重新定義母團與子團的資料關係：每一個子團依附於母團之下獨立存在，使用者可以直接依照不同出發日期查看對應的子團資訊。這使得需求方不需要再透過「最低價＋起」推測不同日期的實際內容，供需雙方在進一步聯繫時，也可以直接針對特定日期與特定行程進行溝通，降低資訊確認成本。</p>
           <figure>
             <img src="../assets/channel-t/s10-02-data-structure.png" width="2048" height="1280" alt="母團與子團資料結構迭代示意圖：從子團資訊壓縮為母團摘要（最低價＋起），改為每個子團依附母團獨立存在、可依出發日期查看完整內容" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
             <div class="figure__placeholder" style="display:none; aspect-ratio: 2048 / 1280;">母團／子團資料結構 — assets/channel-t/s10-02-data-structure.png</div>
@@ -727,12 +753,26 @@
         <div class="block">
           <p class="block__id">S10-03</p>
           <h3>行程標籤：從人工分類轉向 AI 輔助分類</h3>
-          <p>最初的設計中，行程完成解析後，需要由使用者手動設定行程標籤，這些標籤會作為後續搜尋與 AI 智能推薦的資料基礎，標籤的正確性直接影響使用者找到適合行程的效率。</p>
-          <p>但實際使用後，我重新思考：如果 AI 已經能夠解析行程內容，是否還需要讓使用者花時間逐一判斷與設定標籤？因此，後續將標籤建立流程改為：AI 解析行程 → 根據既有標籤規則自動建立標籤 → 使用者確認與修改。AI 不再只是協助填入行程基本資料，也進一步參與行程分類，但我沒有完全取消人工控制，而是保留使用者修改標籤的介面。</p>
+          <div class="sub">
+            <h4>問題</h4>
+          </div>
+          <ul>
+            <li>最初的設計中，行程完成解析後，需要由使用者手動設定行程標籤，這些標籤會作為後續搜尋與 AI 智能推薦的資料基礎</li>
+            <li>標籤的正確性直接影響使用者找到適合行程的效率。</li>
+            <li>有些供應商使用者不去設定標籤，導致平台運作效率不彰</li>
+          </ul>
+          <div class="sub">
+            <h4>設計思考</h4>
+          </div>
+          <p>我重新思考：如果 AI 已經能夠解析行程內容，是否還需要讓使用者花時間逐一判斷與設定標籤？如果由 AI 進行標籤的提供，但同時也讓使用者有去修改的自由，是否能解決這問題？</p>
+          <div class="sub">
+            <h4>迭代設計</h4>
+          </div>
+          <p>迭代後將標籤建立流程改為：AI 解析行程 → 根據既有標籤規則自動建立標籤 → 使用者確認與修改。AI 不再只是協助填入行程基本資料，也進一步參與行程分類，但我沒有完全取消人工控制，而是保留使用者修改標籤的介面。</p>
           <p>因此形成：<strong>AI 負責降低分類成本，使用者保留最終判斷權</strong>，也讓「資料建立」與「搜尋／推薦」之間形成更完整的產品閉環。</p>
           <figure>
-            <img src="../assets/channel-t/s10-03-ai-tagging.png" width="2048" height="1280" alt="行程標籤迭代示意圖：從使用者手動設定標籤，改為 AI 解析行程後依既有規則自動建立標籤、再由使用者確認與修改" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="figure__placeholder" style="display:none; aspect-ratio: 2048 / 1280;">AI 輔助分類 — assets/channel-t/s10-03-ai-tagging.png</div>
+            <img src="../assets/channel-t/s10-03-ai-tagging.svg" width="2048" height="1280" alt="行程標籤迭代示意圖：從使用者手動設定標籤，改為 AI 解析行程後依既有規則自動建立標籤、再由使用者確認與修改" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="figure__placeholder" style="display:none; aspect-ratio: 2048 / 1280;">AI 輔助分類 — assets/channel-t/s10-03-ai-tagging.svg</div>
             <figcaption>行程標籤：從人工分類改為 AI 自動建立、使用者確認修改。<span class="figure__note">示意重製圖，非原始產品畫面</span></figcaption>
           </figure>
         </div>
